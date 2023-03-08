@@ -1,0 +1,1328 @@
+{
+  "address": "0xb77A760e82FD92D79041D40d0f61F9F4AABE7Cf0",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "clInsuranceFundFeeRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "CLInsuranceFundFeeRatioChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "clearingHouseConfig",
+          "type": "address"
+        }
+      ],
+      "name": "ClearingHouseConfigChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "priceFeed",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "collateralRatio",
+          "type": "uint24"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "discountRatio",
+          "type": "uint24"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "depositCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "CollateralAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "collateralRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "CollateralRatioChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "collateralValueDust",
+          "type": "uint256"
+        }
+      ],
+      "name": "CollateralValueDustChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "debtNonSettlementTokenValueRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "DebtNonSettlementTokenValueRatioChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "debtThreshold",
+          "type": "uint256"
+        }
+      ],
+      "name": "DebtThresholdChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "depositCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "DepositCapChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "discountRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "DiscountRatioChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "liquidationRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "LiquidationRatioChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "maxCollateralTokensPerAccount",
+          "type": "uint8"
+        }
+      ],
+      "name": "MaxCollateralTokensPerAccountChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint24",
+          "name": "mmRatioBuffer",
+          "type": "uint24"
+        }
+      ],
+      "name": "MmRatioBufferChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "priceFeed",
+          "type": "address"
+        }
+      ],
+      "name": "PriceFeedChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "name": "VaultChanged",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "priceFeed",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "collateralRatio",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "discountRatio",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint256",
+              "name": "depositCap",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Collateral.Config",
+          "name": "config",
+          "type": "tuple"
+        }
+      ],
+      "name": "addCollateral",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "candidate",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getCLInsuranceFundFeeRatio",
+      "outputs": [
+        {
+          "internalType": "uint24",
+          "name": "",
+          "type": "uint24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getClearingHouseConfig",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "getCollateralConfig",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "priceFeed",
+              "type": "address"
+            },
+            {
+              "internalType": "uint24",
+              "name": "collateralRatio",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint24",
+              "name": "discountRatio",
+              "type": "uint24"
+            },
+            {
+              "internalType": "uint256",
+              "name": "depositCap",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Collateral.Config",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getCollateralValueDust",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getDebtNonSettlementTokenValueRatio",
+      "outputs": [
+        {
+          "internalType": "uint24",
+          "name": "",
+          "type": "uint24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getDebtThreshold",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLiquidationRatio",
+      "outputs": [
+        {
+          "internalType": "uint24",
+          "name": "",
+          "type": "uint24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMaxCollateralTokensPerAccount",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getMmRatioBuffer",
+      "outputs": [
+        {
+          "internalType": "uint24",
+          "name": "",
+          "type": "uint24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "interval",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "getPriceFeedDecimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getVault",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "clearingHouseConfigArg",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "vaultArg",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "maxCollateralTokensPerAccountArg",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint24",
+          "name": "debtNonSettlementTokenValueRatioArg",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint24",
+          "name": "liquidationRatioArg",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint24",
+          "name": "mmRatioBufferArg",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint24",
+          "name": "clInsuranceFundFeeRatioArg",
+          "type": "uint24"
+        },
+        {
+          "internalType": "uint256",
+          "name": "debtThresholdArg",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "collateralValueDustArg",
+          "type": "uint256"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "isCollateral",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint24",
+          "name": "mmRatioBuffer",
+          "type": "uint24"
+        }
+      ],
+      "name": "requireValidCollateralMmRatio",
+      "outputs": [
+        {
+          "internalType": "uint24",
+          "name": "",
+          "type": "uint24"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint24",
+          "name": "clInsuranceFundFeeRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "setCLInsuranceFundFeeRatio",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint24",
+          "name": "collateralRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "setCollateralRatio",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "collateralValueDust",
+          "type": "uint256"
+        }
+      ],
+      "name": "setCollateralValueDust",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint24",
+          "name": "debtNonSettlementTokenValueRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "setDebtNonSettlementTokenValueRatio",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "debtThreshold",
+          "type": "uint256"
+        }
+      ],
+      "name": "setDebtThreshold",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "depositCap",
+          "type": "uint256"
+        }
+      ],
+      "name": "setDepositCap",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint24",
+          "name": "discountRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "setDiscountRatio",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint24",
+          "name": "liquidationRatio",
+          "type": "uint24"
+        }
+      ],
+      "name": "setLiquidationRatio",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "maxCollateralTokensPerAccount",
+          "type": "uint8"
+        }
+      ],
+      "name": "setMaxCollateralTokensPerAccount",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint24",
+          "name": "mmRatioBuffer",
+          "type": "uint24"
+        }
+      ],
+      "name": "setMmRatioBuffer",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "priceFeed",
+          "type": "address"
+        }
+      ],
+      "name": "setPriceFeed",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "updateOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xff5407c14cc9721087ed570321ac063d7d3cf5173855029b69cac12bcae9d26b",
+  "receipt": {
+    "to": null,
+    "from": "0xAD143E30AD4852c97716ED5b32d45BcCfF7DEa36",
+    "contractAddress": "0xb77A760e82FD92D79041D40d0f61F9F4AABE7Cf0",
+    "transactionIndex": 10,
+    "gasUsed": "2142924",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x9f7f8564f29070955fd6317f5d53f839e4f3a021c0db8182bf9660edf8ab568a",
+    "transactionHash": "0xff5407c14cc9721087ed570321ac063d7d3cf5173855029b69cac12bcae9d26b",
+    "logs": [],
+    "blockNumber": 7678455,
+    "cumulativeGasUsed": "7292579",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "7a16bbbc5c6fea2b6505d4631b28aae2",
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint24\",\"name\":\"clInsuranceFundFeeRatio\",\"type\":\"uint24\"}],\"name\":\"CLInsuranceFundFeeRatioChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"clearingHouseConfig\",\"type\":\"address\"}],\"name\":\"ClearingHouseConfigChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"priceFeed\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint24\",\"name\":\"collateralRatio\",\"type\":\"uint24\"},{\"indexed\":false,\"internalType\":\"uint24\",\"name\":\"discountRatio\",\"type\":\"uint24\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"depositCap\",\"type\":\"uint256\"}],\"name\":\"CollateralAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint24\",\"name\":\"collateralRatio\",\"type\":\"uint24\"}],\"name\":\"CollateralRatioChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"collateralValueDust\",\"type\":\"uint256\"}],\"name\":\"CollateralValueDustChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint24\",\"name\":\"debtNonSettlementTokenValueRatio\",\"type\":\"uint24\"}],\"name\":\"DebtNonSettlementTokenValueRatioChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"debtThreshold\",\"type\":\"uint256\"}],\"name\":\"DebtThresholdChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"depositCap\",\"type\":\"uint256\"}],\"name\":\"DepositCapChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint24\",\"name\":\"discountRatio\",\"type\":\"uint24\"}],\"name\":\"DiscountRatioChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint24\",\"name\":\"liquidationRatio\",\"type\":\"uint24\"}],\"name\":\"LiquidationRatioChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"maxCollateralTokensPerAccount\",\"type\":\"uint8\"}],\"name\":\"MaxCollateralTokensPerAccountChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint24\",\"name\":\"mmRatioBuffer\",\"type\":\"uint24\"}],\"name\":\"MmRatioBufferChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Paused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"priceFeed\",\"type\":\"address\"}],\"name\":\"PriceFeedChanged\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"Unpaused\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"vault\",\"type\":\"address\"}],\"name\":\"VaultChanged\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"priceFeed\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"collateralRatio\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"discountRatio\",\"type\":\"uint24\"},{\"internalType\":\"uint256\",\"name\":\"depositCap\",\"type\":\"uint256\"}],\"internalType\":\"struct Collateral.Config\",\"name\":\"config\",\"type\":\"tuple\"}],\"name\":\"addCollateral\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"candidate\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCLInsuranceFundFeeRatio\",\"outputs\":[{\"internalType\":\"uint24\",\"name\":\"\",\"type\":\"uint24\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getClearingHouseConfig\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"getCollateralConfig\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"priceFeed\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"collateralRatio\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"discountRatio\",\"type\":\"uint24\"},{\"internalType\":\"uint256\",\"name\":\"depositCap\",\"type\":\"uint256\"}],\"internalType\":\"struct Collateral.Config\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCollateralValueDust\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDebtNonSettlementTokenValueRatio\",\"outputs\":[{\"internalType\":\"uint24\",\"name\":\"\",\"type\":\"uint24\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getDebtThreshold\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLiquidationRatio\",\"outputs\":[{\"internalType\":\"uint24\",\"name\":\"\",\"type\":\"uint24\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMaxCollateralTokensPerAccount\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getMmRatioBuffer\",\"outputs\":[{\"internalType\":\"uint24\",\"name\":\"\",\"type\":\"uint24\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"interval\",\"type\":\"uint256\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"getPriceFeedDecimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getVault\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"clearingHouseConfigArg\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"vaultArg\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"maxCollateralTokensPerAccountArg\",\"type\":\"uint8\"},{\"internalType\":\"uint24\",\"name\":\"debtNonSettlementTokenValueRatioArg\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"liquidationRatioArg\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"mmRatioBufferArg\",\"type\":\"uint24\"},{\"internalType\":\"uint24\",\"name\":\"clInsuranceFundFeeRatioArg\",\"type\":\"uint24\"},{\"internalType\":\"uint256\",\"name\":\"debtThresholdArg\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"collateralValueDustArg\",\"type\":\"uint256\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"isCollateral\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"paused\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint24\",\"name\":\"mmRatioBuffer\",\"type\":\"uint24\"}],\"name\":\"requireValidCollateralMmRatio\",\"outputs\":[{\"internalType\":\"uint24\",\"name\":\"\",\"type\":\"uint24\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint24\",\"name\":\"clInsuranceFundFeeRatio\",\"type\":\"uint24\"}],\"name\":\"setCLInsuranceFundFeeRatio\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"collateralRatio\",\"type\":\"uint24\"}],\"name\":\"setCollateralRatio\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"collateralValueDust\",\"type\":\"uint256\"}],\"name\":\"setCollateralValueDust\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint24\",\"name\":\"debtNonSettlementTokenValueRatio\",\"type\":\"uint24\"}],\"name\":\"setDebtNonSettlementTokenValueRatio\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"debtThreshold\",\"type\":\"uint256\"}],\"name\":\"setDebtThreshold\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"depositCap\",\"type\":\"uint256\"}],\"name\":\"setDepositCap\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint24\",\"name\":\"discountRatio\",\"type\":\"uint24\"}],\"name\":\"setDiscountRatio\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint24\",\"name\":\"liquidationRatio\",\"type\":\"uint24\"}],\"name\":\"setLiquidationRatio\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"maxCollateralTokensPerAccount\",\"type\":\"uint8\"}],\"name\":\"setMaxCollateralTokensPerAccount\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint24\",\"name\":\"mmRatioBuffer\",\"type\":\"uint24\"}],\"name\":\"setMmRatioBuffer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"setOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"priceFeed\",\"type\":\"address\"}],\"name\":\"setPriceFeed\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"unpause\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"updateOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"candidate()\":{\"details\":\"Returns the candidate that can become the owner.\"},\"getCLInsuranceFundFeeRatio()\":{\"details\":\"6 decimals. For example, `clInsuranceFundFeeRatio` = 5% means      the liquidator will pay 5% of transferred settlement token to insurance fund\",\"returns\":{\"_0\":\"insurance fund fee ratio\"}},\"getClearingHouseConfig()\":{\"returns\":{\"_0\":\"clearingHouseConfig address of clearing house config\"}},\"getCollateralConfig(address)\":{\"params\":{\"token\":\"address of token\"},\"returns\":{\"_0\":\"collateral config\"}},\"getCollateralValueDust()\":{\"details\":\"6 decimals\",\"returns\":{\"_0\":\"Dust collateral value\"}},\"getDebtNonSettlementTokenValueRatio()\":{\"details\":\"6 decimals\",\"returns\":{\"_0\":\"ratio\"}},\"getDebtThreshold()\":{\"details\":\"6 decimals\",\"returns\":{\"_0\":\"Debt threshold\"}},\"getLiquidationRatio()\":{\"details\":\"6 decimals. For example, `liquidationRatio` = 50% means      the liquidator can repay as much as half of the trader\\u2019s debt in one liquidation\",\"returns\":{\"_0\":\"liquidation ratio\"}},\"getMaxCollateralTokensPerAccount()\":{\"returns\":{\"_0\":\"max number of collateral tokens per account\"}},\"getMmRatioBuffer()\":{\"details\":\"6 decimals, same decimals as _mmRatio\",\"returns\":{\"_0\":\"ratio\"}},\"getPrice(address,uint256)\":{\"params\":{\"token\":\"address of token\"},\"returns\":{\"_0\":\"price of the certain period\"}},\"getPriceFeedDecimals(address)\":{\"params\":{\"token\":\"address of token\"},\"returns\":{\"_0\":\"decimals of the price feed\"}},\"getVault()\":{\"returns\":{\"_0\":\"vault address of vault\"}},\"isCollateral(address)\":{\"params\":{\"token\":\"address of token\"},\"returns\":{\"_0\":\"true if the token is one of collateral tokens\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"paused()\":{\"details\":\"Returns true if the contract is paused, and false otherwise.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"requireValidCollateralMmRatio(uint24)\":{\"params\":{\"mmRatioBuffer\":\"safe margin ratio buffer; 6 decimals, same decimals as _mmRatio\"},\"returns\":{\"_0\":\"collateralMmRatio the collateral maintenance margin ratio\"}},\"setCollateralValueDust(uint256)\":{\"details\":\"Same decimals as the settlement token\"},\"setOwner(address)\":{\"details\":\"Set ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"},\"updateOwner()\":{\"details\":\"Transfers ownership of the contract to a new account (`_candidate`). Can only be called by the new owner.\"}},\"version\":1},\"userdoc\":{\"events\":{\"CLInsuranceFundFeeRatioChanged(uint24)\":{\"notice\":\"Emitted when owner init or update the clearing house insurance fund fee ratio,         charge fee for clearing house insurance fund.\"},\"ClearingHouseConfigChanged(address)\":{\"notice\":\"Emitted when owner update the address of clearing house config\"},\"CollateralAdded(address,address,uint24,uint24,uint256)\":{\"notice\":\"Emitted when owner add collateral\"},\"CollateralRatioChanged(address,uint24)\":{\"notice\":\"Emitted when owner update the collateral ratio of a collateral token\"},\"CollateralValueDustChanged(uint256)\":{\"notice\":\"Emitted when owner init or update the collateral value dust,\\t\\t\\tif a trader\\u2019s debt value falls below this dust threshold, \\t\\tthe liquidator will ignore the liquidationRatio.\"},\"DebtNonSettlementTokenValueRatioChanged(uint24)\":{\"notice\":\"Emitted when owner init or update the debt non-settlement token value ratio,         maximum `debt / nonSettlementTokenValue` before the account's is liquidatable\"},\"DebtThresholdChanged(uint256)\":{\"notice\":\"Emitted when owner init or update the debt threshold,\\t\\t \\tmaximum debt allowed before an account\\u2019s collateral is liquidatable.\"},\"DepositCapChanged(address,uint256)\":{\"notice\":\"Emitted when owner update the deposit cap of a collateral token\"},\"DiscountRatioChanged(address,uint24)\":{\"notice\":\"Emitted when owner change the discount ratio\"},\"LiquidationRatioChanged(uint24)\":{\"notice\":\"Emitted when owner init or update the liquidation ratio,         the value presents the max repaid ratio of the collateral liquidation.\"},\"MaxCollateralTokensPerAccountChanged(uint8)\":{\"notice\":\"Emitted when owner init or update the max collateral tokens that per account can have, \\t\\tthis is can prevent high gas cost.\"},\"MmRatioBufferChanged(uint24)\":{\"notice\":\"Emitted when owner init or update the maintenance margin ratio buffer,         the value provides a safe range between the mmRatio & the collateralMMRatio.\"},\"PriceFeedChanged(address,address)\":{\"notice\":\"Emitted when owner update the price feed address of a collateral token\"},\"VaultChanged(address)\":{\"notice\":\"Emitted when owner update the address of vault\"}},\"kind\":\"user\",\"methods\":{\"getCLInsuranceFundFeeRatio()\":{\"notice\":\"Get the insurance fund fee ratio when liquidating a trader's collateral\"},\"getClearingHouseConfig()\":{\"notice\":\"Get the address of clearing house config\"},\"getCollateralConfig(address)\":{\"notice\":\"Get collateral config by token address\"},\"getCollateralValueDust()\":{\"notice\":\"Get the threshold of the minium repaid.  \\t\\tIf a trader\\u2019s collateral value (denominated in settlement token) falls below the threshold,         the liquidator can convert it with 100% `liquidationRatio` so there is no dust left\"},\"getDebtNonSettlementTokenValueRatio()\":{\"notice\":\"Get the maximum `debt / nonSettlementTokenValue` before the account's collaterals are liquidated\"},\"getDebtThreshold()\":{\"notice\":\"Get the maximum debt (denominated in settlement token) allowed\\t\\t\\tbefore an account\\u2019s collateral is liquidatable.\"},\"getLiquidationRatio()\":{\"notice\":\"Get the maximum ratio of debt can be repaid in one transaction\"},\"getMaxCollateralTokensPerAccount()\":{\"notice\":\"Get the max number of collateral tokens per account\"},\"getMmRatioBuffer()\":{\"notice\":\"Get the minimum `margin ratio - mmRatio` before the account's collateral is liquidatable\"},\"getPrice(address,uint256)\":{\"notice\":\"Get the price of the collateral token\"},\"getPriceFeedDecimals(address)\":{\"notice\":\"Get price feed decimals of the collateral token\"},\"getVault()\":{\"notice\":\"Get the address of vault\"},\"isCollateral(address)\":{\"notice\":\"Check if the given token is one of collateral tokens\"},\"requireValidCollateralMmRatio(uint24)\":{\"notice\":\"Require and get the the valid collateral maintenance margin ratio by mmRatioBuffer\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/CollateralManager.sol\":\"CollateralManager\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts-upgradeable/proxy/Initializable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\n// solhint-disable-next-line compiler-version\\npragma solidity >=0.4.24 <0.8.0;\\n\\nimport \\\"../utils/AddressUpgradeable.sol\\\";\\n\\n/**\\n * @dev This is a base contract to aid in writing upgradeable contracts, or any kind of contract that will be deployed\\n * behind a proxy. Since a proxied contract can't have a constructor, it's common to move constructor logic to an\\n * external initializer function, usually called `initialize`. It then becomes necessary to protect this initializer\\n * function so it can only be called once. The {initializer} modifier provided by this contract will have this effect.\\n *\\n * TIP: To avoid leaving the proxy in an uninitialized state, the initializer function should be called as early as\\n * possible by providing the encoded function call as the `_data` argument to {UpgradeableProxy-constructor}.\\n *\\n * CAUTION: When used with inheritance, manual care must be taken to not invoke a parent initializer twice, or to ensure\\n * that all initializers are idempotent. This is not verified automatically as constructors are by Solidity.\\n */\\nabstract contract Initializable {\\n\\n    /**\\n     * @dev Indicates that the contract has been initialized.\\n     */\\n    bool private _initialized;\\n\\n    /**\\n     * @dev Indicates that the contract is in the process of being initialized.\\n     */\\n    bool private _initializing;\\n\\n    /**\\n     * @dev Modifier to protect an initializer function from being invoked twice.\\n     */\\n    modifier initializer() {\\n        require(_initializing || _isConstructor() || !_initialized, \\\"Initializable: contract is already initialized\\\");\\n\\n        bool isTopLevelCall = !_initializing;\\n        if (isTopLevelCall) {\\n            _initializing = true;\\n            _initialized = true;\\n        }\\n\\n        _;\\n\\n        if (isTopLevelCall) {\\n            _initializing = false;\\n        }\\n    }\\n\\n    /// @dev Returns true if and only if the function is running in the constructor\\n    function _isConstructor() private view returns (bool) {\\n        return !AddressUpgradeable.isContract(address(this));\\n    }\\n}\\n\",\"keccak256\":\"0xd8e4eb08dcc1d1860fb347ba5ffd595242b9a1b66d49a47f2b4cb51c3f35017e\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity >=0.6.2 <0.8.0;\\n\\n/**\\n * @dev Collection of functions related to the address type\\n */\\nlibrary AddressUpgradeable {\\n    /**\\n     * @dev Returns true if `account` is a contract.\\n     *\\n     * [IMPORTANT]\\n     * ====\\n     * It is unsafe to assume that an address for which this function returns\\n     * false is an externally-owned account (EOA) and not a contract.\\n     *\\n     * Among others, `isContract` will return false for the following\\n     * types of addresses:\\n     *\\n     *  - an externally-owned account\\n     *  - a contract in construction\\n     *  - an address where a contract will be created\\n     *  - an address where a contract lived, but was destroyed\\n     * ====\\n     */\\n    function isContract(address account) internal view returns (bool) {\\n        // This method relies on extcodesize, which returns 0 for contracts in\\n        // construction, since the code is only stored at the end of the\\n        // constructor execution.\\n\\n        uint256 size;\\n        // solhint-disable-next-line no-inline-assembly\\n        assembly { size := extcodesize(account) }\\n        return size > 0;\\n    }\\n\\n    /**\\n     * @dev Replacement for Solidity's `transfer`: sends `amount` wei to\\n     * `recipient`, forwarding all available gas and reverting on errors.\\n     *\\n     * https://eips.ethereum.org/EIPS/eip-1884[EIP1884] increases the gas cost\\n     * of certain opcodes, possibly making contracts go over the 2300 gas limit\\n     * imposed by `transfer`, making them unable to receive funds via\\n     * `transfer`. {sendValue} removes this limitation.\\n     *\\n     * https://diligence.consensys.net/posts/2019/09/stop-using-soliditys-transfer-now/[Learn more].\\n     *\\n     * IMPORTANT: because control is transferred to `recipient`, care must be\\n     * taken to not create reentrancy vulnerabilities. Consider using\\n     * {ReentrancyGuard} or the\\n     * https://solidity.readthedocs.io/en/v0.5.11/security-considerations.html#use-the-checks-effects-interactions-pattern[checks-effects-interactions pattern].\\n     */\\n    function sendValue(address payable recipient, uint256 amount) internal {\\n        require(address(this).balance >= amount, \\\"Address: insufficient balance\\\");\\n\\n        // solhint-disable-next-line avoid-low-level-calls, avoid-call-value\\n        (bool success, ) = recipient.call{ value: amount }(\\\"\\\");\\n        require(success, \\\"Address: unable to send value, recipient may have reverted\\\");\\n    }\\n\\n    /**\\n     * @dev Performs a Solidity function call using a low level `call`. A\\n     * plain`call` is an unsafe replacement for a function call: use this\\n     * function instead.\\n     *\\n     * If `target` reverts with a revert reason, it is bubbled up by this\\n     * function (like regular Solidity function calls).\\n     *\\n     * Returns the raw returned data. To convert to the expected return value,\\n     * use https://solidity.readthedocs.io/en/latest/units-and-global-variables.html?highlight=abi.decode#abi-encoding-and-decoding-functions[`abi.decode`].\\n     *\\n     * Requirements:\\n     *\\n     * - `target` must be a contract.\\n     * - calling `target` with `data` must not revert.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCall(address target, bytes memory data) internal returns (bytes memory) {\\n      return functionCall(target, data, \\\"Address: low-level call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`], but with\\n     * `errorMessage` as a fallback revert reason when `target` reverts.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCall(address target, bytes memory data, string memory errorMessage) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, 0, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but also transferring `value` wei to `target`.\\n     *\\n     * Requirements:\\n     *\\n     * - the calling contract must have an ETH balance of at least `value`.\\n     * - the called Solidity function must be `payable`.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCallWithValue(address target, bytes memory data, uint256 value) internal returns (bytes memory) {\\n        return functionCallWithValue(target, data, value, \\\"Address: low-level call with value failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCallWithValue-address-bytes-uint256-}[`functionCallWithValue`], but\\n     * with `errorMessage` as a fallback revert reason when `target` reverts.\\n     *\\n     * _Available since v3.1._\\n     */\\n    function functionCallWithValue(address target, bytes memory data, uint256 value, string memory errorMessage) internal returns (bytes memory) {\\n        require(address(this).balance >= value, \\\"Address: insufficient balance for call\\\");\\n        require(isContract(target), \\\"Address: call to non-contract\\\");\\n\\n        // solhint-disable-next-line avoid-low-level-calls\\n        (bool success, bytes memory returndata) = target.call{ value: value }(data);\\n        return _verifyCallResult(success, returndata, errorMessage);\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-}[`functionCall`],\\n     * but performing a static call.\\n     *\\n     * _Available since v3.3._\\n     */\\n    function functionStaticCall(address target, bytes memory data) internal view returns (bytes memory) {\\n        return functionStaticCall(target, data, \\\"Address: low-level static call failed\\\");\\n    }\\n\\n    /**\\n     * @dev Same as {xref-Address-functionCall-address-bytes-string-}[`functionCall`],\\n     * but performing a static call.\\n     *\\n     * _Available since v3.3._\\n     */\\n    function functionStaticCall(address target, bytes memory data, string memory errorMessage) internal view returns (bytes memory) {\\n        require(isContract(target), \\\"Address: static call to non-contract\\\");\\n\\n        // solhint-disable-next-line avoid-low-level-calls\\n        (bool success, bytes memory returndata) = target.staticcall(data);\\n        return _verifyCallResult(success, returndata, errorMessage);\\n    }\\n\\n    function _verifyCallResult(bool success, bytes memory returndata, string memory errorMessage) private pure returns(bytes memory) {\\n        if (success) {\\n            return returndata;\\n        } else {\\n            // Look for revert reason and bubble it up if present\\n            if (returndata.length > 0) {\\n                // The easiest way to bubble the revert reason is using memory via assembly\\n\\n                // solhint-disable-next-line no-inline-assembly\\n                assembly {\\n                    let returndata_size := mload(returndata)\\n                    revert(add(32, returndata), returndata_size)\\n                }\\n            } else {\\n                revert(errorMessage);\\n            }\\n        }\\n    }\\n}\\n\",\"keccak256\":\"0xfc5ea91fa9ceb1961023b2a6c978b902888c52b90847ac7813fe3b79524165f6\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity >=0.6.0 <0.8.0;\\nimport \\\"../proxy/Initializable.sol\\\";\\n\\n/*\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with GSN meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract ContextUpgradeable is Initializable {\\n    function __Context_init() internal initializer {\\n        __Context_init_unchained();\\n    }\\n\\n    function __Context_init_unchained() internal initializer {\\n    }\\n    function _msgSender() internal view virtual returns (address payable) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes memory) {\\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\\n        return msg.data;\\n    }\\n    uint256[50] private __gap;\\n}\\n\",\"keccak256\":\"0xbbf8a21b9a66c48d45ff771b8563c6df19ba451d63dfb8380a865c1e1f29d1a0\",\"license\":\"MIT\"},\"@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity >=0.6.0 <0.8.0;\\n\\nimport \\\"./ContextUpgradeable.sol\\\";\\nimport \\\"../proxy/Initializable.sol\\\";\\n\\n/**\\n * @dev Contract module which allows children to implement an emergency stop\\n * mechanism that can be triggered by an authorized account.\\n *\\n * This module is used through inheritance. It will make available the\\n * modifiers `whenNotPaused` and `whenPaused`, which can be applied to\\n * the functions of your contract. Note that they will not be pausable by\\n * simply including this module, only once the modifiers are put in place.\\n */\\nabstract contract PausableUpgradeable is Initializable, ContextUpgradeable {\\n    /**\\n     * @dev Emitted when the pause is triggered by `account`.\\n     */\\n    event Paused(address account);\\n\\n    /**\\n     * @dev Emitted when the pause is lifted by `account`.\\n     */\\n    event Unpaused(address account);\\n\\n    bool private _paused;\\n\\n    /**\\n     * @dev Initializes the contract in unpaused state.\\n     */\\n    function __Pausable_init() internal initializer {\\n        __Context_init_unchained();\\n        __Pausable_init_unchained();\\n    }\\n\\n    function __Pausable_init_unchained() internal initializer {\\n        _paused = false;\\n    }\\n\\n    /**\\n     * @dev Returns true if the contract is paused, and false otherwise.\\n     */\\n    function paused() public view virtual returns (bool) {\\n        return _paused;\\n    }\\n\\n    /**\\n     * @dev Modifier to make a function callable only when the contract is not paused.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must not be paused.\\n     */\\n    modifier whenNotPaused() {\\n        require(!paused(), \\\"Pausable: paused\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Modifier to make a function callable only when the contract is paused.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must be paused.\\n     */\\n    modifier whenPaused() {\\n        require(paused(), \\\"Pausable: not paused\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Triggers stopped state.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must not be paused.\\n     */\\n    function _pause() internal virtual whenNotPaused {\\n        _paused = true;\\n        emit Paused(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Returns to normal state.\\n     *\\n     * Requirements:\\n     *\\n     * - The contract must be paused.\\n     */\\n    function _unpause() internal virtual whenPaused {\\n        _paused = false;\\n        emit Unpaused(_msgSender());\\n    }\\n    uint256[49] private __gap;\\n}\\n\",\"keccak256\":\"0x73bef0a5dec3efde8183c4858d90f683ed2771656c4329647b4d5b0f89498fd5\",\"license\":\"MIT\"},\"@perp/perp-oracle-contract/contracts/interface/IPriceFeed.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\ninterface IPriceFeed {\\n    function decimals() external view returns (uint8);\\n\\n    /// @dev Returns the index price of the token.\\n    /// @param interval The interval represents twap interval.\\n    function getPrice(uint256 interval) external view returns (uint256);\\n}\\n\",\"keccak256\":\"0x4417d0175e8165ea6f6559b3dfbe5ff309cef1c0d1e242e528610a191c9b7769\",\"license\":\"GPL-3.0-or-later\"},\"contracts/CollateralManager.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity 0.7.6;\\npragma abicoder v2;\\n\\nimport { OwnerPausable } from \\\"./base/OwnerPausable.sol\\\";\\nimport { CollateralManagerStorageV1 } from \\\"./storage/CollateralManagerStorage.sol\\\";\\nimport { AddressUpgradeable } from \\\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\\\";\\nimport { IPriceFeed } from \\\"@perp/perp-oracle-contract/contracts/interface/IPriceFeed.sol\\\";\\nimport { Collateral } from \\\"./lib/Collateral.sol\\\";\\nimport { ICollateralManager } from \\\"./interface/ICollateralManager.sol\\\";\\nimport { IClearingHouseConfig } from \\\"./interface/IClearingHouseConfig.sol\\\";\\nimport { IVault } from \\\"./interface/IVault.sol\\\";\\n\\ncontract CollateralManager is ICollateralManager, OwnerPausable, CollateralManagerStorageV1 {\\n    using AddressUpgradeable for address;\\n\\n    uint24 private constant _ONE_HUNDRED_PERCENT_RATIO = 1e6;\\n\\n    //\\n    // MODIFIER\\n    //\\n\\n    modifier checkRatio(uint24 ratio) {\\n        // CM_IR: invalid ratio, should be in [0, 1]\\n        require(ratio <= _ONE_HUNDRED_PERCENT_RATIO, \\\"CM_IR\\\");\\n        _;\\n    }\\n\\n    //\\n    // EXTERNAL NON-VIEW\\n    //\\n\\n    function initialize(\\n        address clearingHouseConfigArg,\\n        address vaultArg,\\n        uint8 maxCollateralTokensPerAccountArg,\\n        uint24 debtNonSettlementTokenValueRatioArg,\\n        uint24 liquidationRatioArg,\\n        uint24 mmRatioBufferArg,\\n        uint24 clInsuranceFundFeeRatioArg,\\n        uint256 debtThresholdArg,\\n        uint256 collateralValueDustArg\\n    )\\n        external\\n        initializer\\n        checkRatio(debtNonSettlementTokenValueRatioArg)\\n        checkRatio(liquidationRatioArg)\\n        checkRatio(clInsuranceFundFeeRatioArg)\\n    {\\n        // CM_CHCNC: clearing house config is not contract\\n        require(clearingHouseConfigArg.isContract(), \\\"CM_CHCNC\\\");\\n        // CM_VNC: vault is not contract\\n        require(vaultArg.isContract(), \\\"CM_VNC\\\");\\n\\n        __OwnerPausable_init();\\n\\n        _clearingHouseConfig = clearingHouseConfigArg;\\n        _vault = vaultArg;\\n        _maxCollateralTokensPerAccount = maxCollateralTokensPerAccountArg;\\n        _debtNonSettlementTokenValueRatio = debtNonSettlementTokenValueRatioArg;\\n        _liquidationRatio = liquidationRatioArg;\\n\\n        requireValidCollateralMmRatio(mmRatioBufferArg);\\n        _mmRatioBuffer = mmRatioBufferArg;\\n\\n        _clInsuranceFundFeeRatio = clInsuranceFundFeeRatioArg;\\n        _debtThreshold = debtThresholdArg;\\n        _collateralValueDust = collateralValueDustArg;\\n\\n        emit ClearingHouseConfigChanged(clearingHouseConfigArg);\\n        emit VaultChanged(vaultArg);\\n        emit MaxCollateralTokensPerAccountChanged(maxCollateralTokensPerAccountArg);\\n        emit MmRatioBufferChanged(mmRatioBufferArg);\\n        emit DebtNonSettlementTokenValueRatioChanged(debtNonSettlementTokenValueRatioArg);\\n        emit LiquidationRatioChanged(liquidationRatioArg);\\n        emit CLInsuranceFundFeeRatioChanged(clInsuranceFundFeeRatioArg);\\n        emit DebtThresholdChanged(debtThresholdArg);\\n        emit CollateralValueDustChanged(collateralValueDustArg);\\n    }\\n\\n    function addCollateral(address token, Collateral.Config memory config)\\n        external\\n        checkRatio(config.collateralRatio)\\n        checkRatio(config.discountRatio)\\n        onlyOwner\\n    {\\n        // CM_CTE: collateral token already exists\\n        require(!isCollateral(token), \\\"CM_CTE\\\");\\n        // CM_CTNC: collateral token is not contract\\n        require(token.isContract(), \\\"CM_CTNC\\\");\\n        // CM_PFNC: price feed is not contract\\n        require(config.priceFeed.isContract(), \\\"CM_PFNC\\\");\\n        // CM_CIS: collateral token is settlement token\\n        require(IVault(_vault).getSettlementToken() != token, \\\"CM_CIS\\\");\\n\\n        _collateralConfigMap[token] = config;\\n        emit CollateralAdded(token, config.priceFeed, config.collateralRatio, config.discountRatio, config.depositCap);\\n    }\\n\\n    function setPriceFeed(address token, address priceFeed) external onlyOwner {\\n        _requireIsCollateral(token);\\n        // CM_PFNC: price feed is not contract\\n        require(priceFeed.isContract(), \\\"CM_PFNC\\\");\\n\\n        _collateralConfigMap[token].priceFeed = priceFeed;\\n        emit PriceFeedChanged(token, priceFeed);\\n    }\\n\\n    function setCollateralRatio(address token, uint24 collateralRatio) external checkRatio(collateralRatio) onlyOwner {\\n        _requireIsCollateral(token);\\n\\n        _collateralConfigMap[token].collateralRatio = collateralRatio;\\n        emit CollateralRatioChanged(token, collateralRatio);\\n    }\\n\\n    function setDiscountRatio(address token, uint24 discountRatio) external checkRatio(discountRatio) onlyOwner {\\n        _requireIsCollateral(token);\\n\\n        _collateralConfigMap[token].discountRatio = discountRatio;\\n        emit DiscountRatioChanged(token, discountRatio);\\n    }\\n\\n    function setDepositCap(address token, uint256 depositCap) external onlyOwner {\\n        _requireIsCollateral(token);\\n        _collateralConfigMap[token].depositCap = depositCap;\\n        emit DepositCapChanged(token, depositCap);\\n    }\\n\\n    function setMaxCollateralTokensPerAccount(uint8 maxCollateralTokensPerAccount) external onlyOwner {\\n        _maxCollateralTokensPerAccount = maxCollateralTokensPerAccount;\\n        emit MaxCollateralTokensPerAccountChanged(maxCollateralTokensPerAccount);\\n    }\\n\\n    function setMmRatioBuffer(uint24 mmRatioBuffer) external onlyOwner {\\n        requireValidCollateralMmRatio(mmRatioBuffer);\\n\\n        _mmRatioBuffer = mmRatioBuffer;\\n        emit MmRatioBufferChanged(mmRatioBuffer);\\n    }\\n\\n    function setDebtNonSettlementTokenValueRatio(uint24 debtNonSettlementTokenValueRatio)\\n        external\\n        checkRatio(debtNonSettlementTokenValueRatio)\\n        onlyOwner\\n    {\\n        _debtNonSettlementTokenValueRatio = debtNonSettlementTokenValueRatio;\\n        emit DebtNonSettlementTokenValueRatioChanged(debtNonSettlementTokenValueRatio);\\n    }\\n\\n    function setLiquidationRatio(uint24 liquidationRatio) external checkRatio(liquidationRatio) onlyOwner {\\n        _liquidationRatio = liquidationRatio;\\n        emit LiquidationRatioChanged(liquidationRatio);\\n    }\\n\\n    function setCLInsuranceFundFeeRatio(uint24 clInsuranceFundFeeRatio)\\n        external\\n        checkRatio(clInsuranceFundFeeRatio)\\n        onlyOwner\\n    {\\n        _clInsuranceFundFeeRatio = clInsuranceFundFeeRatio;\\n        emit CLInsuranceFundFeeRatioChanged(clInsuranceFundFeeRatio);\\n    }\\n\\n    function setDebtThreshold(uint256 debtThreshold) external onlyOwner {\\n        // CM_ZDT: zero debt threshold\\n        require(debtThreshold != 0, \\\"CM_ZDT\\\");\\n\\n        _debtThreshold = debtThreshold;\\n        emit DebtThresholdChanged(debtThreshold);\\n    }\\n\\n    /// @dev Same decimals as the settlement token\\n    function setCollateralValueDust(uint256 collateralValueDust) external onlyOwner {\\n        _collateralValueDust = collateralValueDust;\\n        emit CollateralValueDustChanged(collateralValueDust);\\n    }\\n\\n    //\\n    // EXTERNAL VIEW\\n    //\\n\\n    /// @inheritdoc ICollateralManager\\n    function getClearingHouseConfig() external view override returns (address) {\\n        return _clearingHouseConfig;\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getVault() external view override returns (address) {\\n        return _vault;\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getCollateralConfig(address token) external view override returns (Collateral.Config memory) {\\n        return _collateralConfigMap[token];\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getPriceFeedDecimals(address token) external view override returns (uint8) {\\n        _requireIsCollateral(token);\\n        return IPriceFeed(_collateralConfigMap[token].priceFeed).decimals();\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getPrice(address token, uint256 interval) external view override returns (uint256) {\\n        _requireIsCollateral(token);\\n        return IPriceFeed(_collateralConfigMap[token].priceFeed).getPrice(interval);\\n    }\\n\\n    function getMaxCollateralTokensPerAccount() external view override returns (uint8) {\\n        return _maxCollateralTokensPerAccount;\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getMmRatioBuffer() external view override returns (uint24) {\\n        return _mmRatioBuffer;\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getDebtNonSettlementTokenValueRatio() external view override returns (uint24) {\\n        return _debtNonSettlementTokenValueRatio;\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getLiquidationRatio() external view override returns (uint24) {\\n        return _liquidationRatio;\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getCLInsuranceFundFeeRatio() external view override returns (uint24) {\\n        return _clInsuranceFundFeeRatio;\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getDebtThreshold() external view override returns (uint256) {\\n        return _debtThreshold;\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function getCollateralValueDust() external view override returns (uint256) {\\n        return _collateralValueDust;\\n    }\\n\\n    //\\n    // PUBLIC VIEW\\n    //\\n\\n    /// @inheritdoc ICollateralManager\\n    function isCollateral(address token) public view override returns (bool) {\\n        return _collateralConfigMap[token].priceFeed != address(0);\\n    }\\n\\n    /// @inheritdoc ICollateralManager\\n    function requireValidCollateralMmRatio(uint24 mmRatioBuffer) public view override returns (uint24) {\\n        uint24 collateralMmRatio = IClearingHouseConfig(_clearingHouseConfig).getMmRatio() + mmRatioBuffer;\\n        // CM_ICMR : invalid collateralMmRatio\\n        require(collateralMmRatio <= _ONE_HUNDRED_PERCENT_RATIO, \\\"CM_ICMR\\\");\\n\\n        return collateralMmRatio;\\n    }\\n\\n    //\\n    // INTERNAL VIEW\\n    //\\n\\n    function _requireIsCollateral(address token) internal view {\\n        // CM_TINAC: token is not a collateral\\n        require(isCollateral(token), \\\"CM_TINAC\\\");\\n    }\\n}\\n\",\"keccak256\":\"0xe4e3f7723887d3dc2bedbdf2be7ff4b43a0546666ae8c42d849d4d6a8e853796\",\"license\":\"GPL-2.0-or-later\"},\"contracts/base/OwnerPausable.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\nimport { PausableUpgradeable } from \\\"@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol\\\";\\nimport { SafeOwnable } from \\\"./SafeOwnable.sol\\\";\\n\\nabstract contract OwnerPausable is SafeOwnable, PausableUpgradeable {\\n    // __gap is reserved storage\\n    uint256[50] private __gap;\\n\\n    // solhint-disable-next-line func-order\\n    function __OwnerPausable_init() internal initializer {\\n        __SafeOwnable_init();\\n        __Pausable_init();\\n    }\\n\\n    function pause() external onlyOwner {\\n        _pause();\\n    }\\n\\n    function unpause() external onlyOwner {\\n        _unpause();\\n    }\\n\\n    function _msgSender() internal view virtual override returns (address payable) {\\n        return super._msgSender();\\n    }\\n\\n    function _msgData() internal view virtual override returns (bytes memory) {\\n        return super._msgData();\\n    }\\n}\\n\",\"keccak256\":\"0xfad93bce97ba8da23cc0ca4f0cd0e86713ef29d1efcd3063845edc991b095398\",\"license\":\"GPL-3.0-or-later\"},\"contracts/base/SafeOwnable.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\nimport { ContextUpgradeable } from \\\"@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol\\\";\\n\\nabstract contract SafeOwnable is ContextUpgradeable {\\n    address private _owner;\\n    address private _candidate;\\n\\n    // __gap is reserved storage\\n    uint256[50] private __gap;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        // caller not owner\\n        require(owner() == _msgSender(), \\\"SO_CNO\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n\\n    function __SafeOwnable_init() internal initializer {\\n        __Context_init();\\n        address msgSender = _msgSender();\\n        _owner = msgSender;\\n        emit OwnershipTransferred(address(0), msgSender);\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() external virtual onlyOwner {\\n        // emitting event first to avoid caching values\\n        emit OwnershipTransferred(_owner, address(0));\\n        _owner = address(0);\\n        _candidate = address(0);\\n    }\\n\\n    /**\\n     * @dev Set ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function setOwner(address newOwner) external onlyOwner {\\n        // newOwner is 0\\n        require(newOwner != address(0), \\\"SO_NW0\\\");\\n        // same as original\\n        require(newOwner != _owner, \\\"SO_SAO\\\");\\n        // same as candidate\\n        require(newOwner != _candidate, \\\"SO_SAC\\\");\\n\\n        _candidate = newOwner;\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`_candidate`).\\n     * Can only be called by the new owner.\\n     */\\n    function updateOwner() external {\\n        // candidate is zero\\n        require(_candidate != address(0), \\\"SO_C0\\\");\\n        // caller is not candidate\\n        require(_candidate == _msgSender(), \\\"SO_CNC\\\");\\n\\n        // emitting event first to avoid caching values\\n        emit OwnershipTransferred(_owner, _candidate);\\n        _owner = _candidate;\\n        _candidate = address(0);\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Returns the candidate that can become the owner.\\n     */\\n    function candidate() external view returns (address) {\\n        return _candidate;\\n    }\\n}\\n\",\"keccak256\":\"0x2e83f0f3a4c9eef7ea1e687c758bd7f801405ce7465a801274439215922f549b\",\"license\":\"GPL-3.0-or-later\"},\"contracts/interface/IClearingHouseConfig.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\n\\ninterface IClearingHouseConfig {\\n    /// @return maxMarketsPerAccount Max value of total markets per account\\n    function getMaxMarketsPerAccount() external view returns (uint8 maxMarketsPerAccount);\\n\\n    /// @return imRatio Initial margin ratio\\n    function getImRatio() external view returns (uint24 imRatio);\\n\\n    /// @return mmRatio Maintenance margin requirement ratio\\n    function getMmRatio() external view returns (uint24 mmRatio);\\n\\n    /// @return liquidationPenaltyRatio Liquidation penalty ratio\\n    function getLiquidationPenaltyRatio() external view returns (uint24 liquidationPenaltyRatio);\\n\\n    /// @return partialCloseRatio Partial close ratio\\n    function getPartialCloseRatio() external view returns (uint24 partialCloseRatio);\\n\\n    /// @return twapInterval TwapInterval for funding and prices (mark & index) calculations\\n    function getTwapInterval() external view returns (uint32 twapInterval);\\n\\n    /// @return settlementTokenBalanceCap Max value of settlement token balance\\n    function getSettlementTokenBalanceCap() external view returns (uint256 settlementTokenBalanceCap);\\n\\n    /// @return maxFundingRate Max value of funding rate\\n    function getMaxFundingRate() external view returns (uint24 maxFundingRate);\\n\\n    /// @return isBackstopLiquidityProvider is backstop liquidity provider\\n    function isBackstopLiquidityProvider(address account) external view returns (bool isBackstopLiquidityProvider);\\n}\\n\",\"keccak256\":\"0x20aca8ab185428ace5e8fd00abc67f4ba5d3a8dd9928dfcc5d367dac48fc2b53\",\"license\":\"GPL-3.0-or-later\"},\"contracts/interface/ICollateralManager.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity 0.7.6;\\npragma abicoder v2;\\n\\nimport { Collateral } from \\\"../lib/Collateral.sol\\\";\\n\\ninterface ICollateralManager {\\n    /// @notice Emitted when owner add collateral\\n    /// @param token address of token\\n    /// @param priceFeed address of price feed\\n    /// @param collateralRatio collateral ratio\\n    /// @param discountRatio discount ratio for the collateral liquidation\\n    /// @param depositCap max amount of collateral that can be deposited\\n    event CollateralAdded(\\n        address indexed token,\\n        address priceFeed,\\n        uint24 collateralRatio,\\n        uint24 discountRatio,\\n        uint256 depositCap\\n    );\\n\\n    /// @notice Emitted when owner update the address of clearing house config\\n    /// @param clearingHouseConfig address of clearing house config\\n    event ClearingHouseConfigChanged(address indexed clearingHouseConfig);\\n\\n    /// @notice Emitted when owner update the address of vault\\n    /// @param vault address of vault\\n    event VaultChanged(address indexed vault);\\n\\n    /// @notice Emitted when owner update the price feed address of a collateral token\\n    /// @param token address of token\\n    /// @param priceFeed address of price feed\\n    event PriceFeedChanged(address indexed token, address priceFeed);\\n\\n    /// @notice Emitted when owner update the collateral ratio of a collateral token\\n    /// @param token address of token\\n    /// @param collateralRatio collateral ratio\\n    event CollateralRatioChanged(address indexed token, uint24 collateralRatio);\\n\\n    /// @notice Emitted when owner change the discount ratio\\n    /// @param token address of token\\n    /// @param discountRatio discount ratio for the collateral liquidation\\n    event DiscountRatioChanged(address indexed token, uint24 discountRatio);\\n\\n    /// @notice Emitted when owner update the deposit cap of a collateral token\\n    /// @param token address of token\\n    /// @param depositCap max amount of the collateral that can be deposited\\n    event DepositCapChanged(address indexed token, uint256 depositCap);\\n\\n    /// @notice Emitted when owner init or update the max collateral tokens that per account can have,\\n    /// \\t\\tthis is can prevent high gas cost.\\n    /// @param maxCollateralTokensPerAccount max amount of collateral tokens that per account can have\\n    event MaxCollateralTokensPerAccountChanged(uint8 maxCollateralTokensPerAccount);\\n\\n    /// @notice Emitted when owner init or update the maintenance margin ratio buffer,\\n    ///         the value provides a safe range between the mmRatio & the collateralMMRatio.\\n    /// @param mmRatioBuffer safe buffer number (bps)\\n    event MmRatioBufferChanged(uint24 mmRatioBuffer);\\n\\n    /// @notice Emitted when owner init or update the debt non-settlement token value ratio,\\n    ///         maximum `debt / nonSettlementTokenValue` before the account's is liquidatable\\n    /// @param debtNonSettlementTokenValueRatio debt non-settlement token value ratio, \\u2264 1\\n    event DebtNonSettlementTokenValueRatioChanged(uint24 debtNonSettlementTokenValueRatio);\\n\\n    /// @notice Emitted when owner init or update the liquidation ratio,\\n    ///         the value presents the max repaid ratio of the collateral liquidation.\\n    /// @param liquidationRatio liquidation ratio, \\u2264 1\\n    event LiquidationRatioChanged(uint24 liquidationRatio);\\n\\n    /// @notice Emitted when owner init or update the clearing house insurance fund fee ratio,\\n    ///         charge fee for clearing house insurance fund.\\n    /// @param clInsuranceFundFeeRatio clearing house insurance fund fee ratio, \\u2264 1\\n    event CLInsuranceFundFeeRatioChanged(uint24 clInsuranceFundFeeRatio);\\n\\n    /// @notice Emitted when owner init or update the debt threshold,\\n    ///\\t\\t \\tmaximum debt allowed before an account\\u2019s collateral is liquidatable.\\n    /// @param debtThreshold debt threshold\\n    event DebtThresholdChanged(uint256 debtThreshold);\\n\\n    /// @notice Emitted when owner init or update the collateral value dust,\\n    ///\\t\\t\\tif a trader\\u2019s debt value falls below this dust threshold,\\n    /// \\t\\tthe liquidator will ignore the liquidationRatio.\\n    /// @param collateralValueDust collateral value dust\\n    event CollateralValueDustChanged(uint256 collateralValueDust);\\n\\n    /// @notice Get the address of vault\\n    /// @return vault address of vault\\n    function getVault() external view returns (address);\\n\\n    /// @notice Get the address of clearing house config\\n    /// @return clearingHouseConfig address of clearing house config\\n    function getClearingHouseConfig() external view returns (address);\\n\\n    /// @notice Get collateral config by token address\\n    /// @param token address of token\\n    /// @return collateral config\\n    function getCollateralConfig(address token) external view returns (Collateral.Config memory);\\n\\n    /// @notice Get price feed decimals of the collateral token\\n    /// @param token address of token\\n    /// @return decimals of the price feed\\n    function getPriceFeedDecimals(address token) external view returns (uint8);\\n\\n    /// @notice Get the price of the collateral token\\n    /// @param token address of token\\n    /// @return price of the certain period\\n    function getPrice(address token, uint256 interval) external view returns (uint256);\\n\\n    /// @notice Get the max number of collateral tokens per account\\n    /// @return max number of collateral tokens per account\\n    function getMaxCollateralTokensPerAccount() external view returns (uint8);\\n\\n    /// @notice Get the minimum `margin ratio - mmRatio` before the account's collateral is liquidatable\\n    /// @dev 6 decimals, same decimals as _mmRatio\\n    /// @return ratio\\n    function getMmRatioBuffer() external view returns (uint24);\\n\\n    /// @notice Get the maximum `debt / nonSettlementTokenValue` before the account's collaterals are liquidated\\n    /// @dev 6 decimals\\n    /// @return ratio\\n    function getDebtNonSettlementTokenValueRatio() external view returns (uint24);\\n\\n    /// @notice Get the maximum ratio of debt can be repaid in one transaction\\n    /// @dev 6 decimals. For example, `liquidationRatio` = 50% means\\n    ///      the liquidator can repay as much as half of the trader\\u2019s debt in one liquidation\\n    /// @return liquidation ratio\\n    function getLiquidationRatio() external view returns (uint24);\\n\\n    /// @notice Get the insurance fund fee ratio when liquidating a trader's collateral\\n    /// @dev 6 decimals. For example, `clInsuranceFundFeeRatio` = 5% means\\n    ///      the liquidator will pay 5% of transferred settlement token to insurance fund\\n    /// @return insurance fund fee ratio\\n    function getCLInsuranceFundFeeRatio() external view returns (uint24);\\n\\n    /// @notice Get the maximum debt (denominated in settlement token) allowed\\n    ///\\t\\t\\tbefore an account\\u2019s collateral is liquidatable.\\n    /// @dev 6 decimals\\n    /// @return Debt threshold\\n    function getDebtThreshold() external view returns (uint256);\\n\\n    /// @notice Get the threshold of the minium repaid.\\n    ///  \\t\\tIf a trader\\u2019s collateral value (denominated in settlement token) falls below the threshold,\\n    ///         the liquidator can convert it with 100% `liquidationRatio` so there is no dust left\\n    /// @dev 6 decimals\\n    /// @return Dust collateral value\\n    function getCollateralValueDust() external view returns (uint256);\\n\\n    /// @notice Check if the given token is one of collateral tokens\\n    /// @param token address of token\\n    /// @return true if the token is one of collateral tokens\\n    function isCollateral(address token) external view returns (bool);\\n\\n    /// @notice Require and get the the valid collateral maintenance margin ratio by mmRatioBuffer\\n    /// @param mmRatioBuffer safe margin ratio buffer; 6 decimals, same decimals as _mmRatio\\n    /// @return collateralMmRatio the collateral maintenance margin ratio\\n    function requireValidCollateralMmRatio(uint24 mmRatioBuffer) external view returns (uint24);\\n}\\n\",\"keccak256\":\"0x721a33279bbe3e3c40286f03fc26f1b1e2ab1ac655c078d5b6abccac4598b2ef\",\"license\":\"GPL-2.0-or-later\"},\"contracts/interface/IVault.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-3.0-or-later\\npragma solidity 0.7.6;\\npragma abicoder v2;\\n\\ninterface IVault {\\n    /// @notice Emitted when trader deposit collateral into vault\\n    /// @param collateralToken The address of token deposited\\n    /// @param trader The address of trader\\n    /// @param amount The amount of token deposited\\n    event Deposited(address indexed collateralToken, address indexed trader, uint256 amount);\\n\\n    /// @notice Emitted when trader withdraw collateral from vault\\n    /// @param collateralToken The address of token withdrawn\\n    /// @param trader The address of trader\\n    /// @param amount The amount of token withdrawn\\n    event Withdrawn(address indexed collateralToken, address indexed trader, uint256 amount);\\n\\n    /// @notice Emitted when a trader's collateral is liquidated\\n    /// @param trader The address of trader\\n    /// @param collateralToken The address of the token that is liquidated\\n    /// @param liquidator The address of liquidator\\n    /// @param collateral The amount of collateral token liquidated\\n    /// @param repaidSettlementWithoutInsuranceFundFeeX10_S The amount of settlement token repaid\\n    ///        for trader (in settlement token's decimals)\\n    /// @param insuranceFundFeeX10_S The amount of insurance fund fee paid(in settlement token's decimals)\\n    /// @param discountRatio The discount ratio of liquidation price\\n    event CollateralLiquidated(\\n        address indexed trader,\\n        address indexed collateralToken,\\n        address indexed liquidator,\\n        uint256 collateral,\\n        uint256 repaidSettlementWithoutInsuranceFundFeeX10_S,\\n        uint256 insuranceFundFeeX10_S,\\n        uint24 discountRatio\\n    );\\n\\n    /// @notice Emitted when trustedForwarder is changed\\n    /// @dev trustedForwarder is only used for metaTx\\n    /// @param trustedForwarder The address of trustedForwarder\\n    event TrustedForwarderChanged(address indexed trustedForwarder);\\n\\n    /// @notice Emitted when clearingHouse is changed\\n    /// @param clearingHouse The address of clearingHouse\\n    event ClearingHouseChanged(address indexed clearingHouse);\\n\\n    /// @notice Emitted when collateralManager is changed\\n    /// @param collateralManager The address of collateralManager\\n    event CollateralManagerChanged(address indexed collateralManager);\\n\\n    /// @notice Emitted when WETH9 is changed\\n    /// @param WETH9 The address of WETH9\\n    event WETH9Changed(address indexed WETH9);\\n\\n    /// @notice Deposit collateral into vault\\n    /// @param token The address of the token to deposit\\n    /// @param amount The amount of the token to deposit\\n    function deposit(address token, uint256 amount) external;\\n\\n    /// @notice Deposit the collateral token for other account\\n    /// @param to The address of the account to deposit to\\n    /// @param token The address of collateral token\\n    /// @param amount The amount of the token to deposit\\n    function depositFor(\\n        address to,\\n        address token,\\n        uint256 amount\\n    ) external;\\n\\n    /// @notice Deposit ETH as collateral into vault\\n    function depositEther() external payable;\\n\\n    /// @notice Deposit ETH as collateral for specified account\\n    /// @param to The address of the account to deposit to\\n    function depositEtherFor(address to) external payable;\\n\\n    /// @notice Withdraw collateral from vault\\n    /// @param token The address of the token to withdraw\\n    /// @param amount The amount of the token to withdraw\\n    function withdraw(address token, uint256 amount) external;\\n\\n    /// @notice Withdraw ETH from vault\\n    /// @param amount The amount of the ETH to withdraw\\n    function withdrawEther(uint256 amount) external;\\n\\n    /// @notice Withdraw all free collateral from vault\\n    /// @param token The address of the token to withdraw\\n    /// @return amount The amount of the token withdrawn\\n    function withdrawAll(address token) external returns (uint256 amount);\\n\\n    /// @notice Withdraw all free collateral of ETH from vault\\n    /// @return amount The amount of ETH withdrawn\\n    function withdrawAllEther() external returns (uint256 amount);\\n\\n    /// @notice Liquidate trader's collateral by given settlement token amount or non settlement token amount\\n    /// @param trader The address of trader that will be liquidated\\n    /// @param token The address of non settlement collateral token that the trader will be liquidated\\n    /// @param amount The amount of settlement token that the liquidator will repay for trader or\\n    ///               the amount of non-settlement collateral token that the liquidator will charge from trader\\n    /// @param isDenominatedInSettlementToken Whether the amount is denominated in settlement token or not\\n    /// @return returnAmount The amount of a non-settlement token (in its native decimals) that is liquidated\\n    ///         when `isDenominatedInSettlementToken` is true or the amount of settlement token that is repaid\\n    ///         when `isDenominatedInSettlementToken` is false\\n    function liquidateCollateral(\\n        address trader,\\n        address token,\\n        uint256 amount,\\n        bool isDenominatedInSettlementToken\\n    ) external returns (uint256 returnAmount);\\n\\n    /// @notice Get the specified trader's settlement token balance, without pending fee, funding payment\\n    ///         and owed realized PnL\\n    /// @dev The function is equivalent to `getBalanceByToken(trader, settlementToken)`\\n    ///      We keep this function solely for backward-compatibility with the older single-collateral system.\\n    ///      In practical applications, the developer might want to use `getSettlementTokenValue()` instead\\n    ///      because the latter includes pending fee, funding payment etc.\\n    ///      and therefore more accurately reflects a trader's settlement (ex. USDC) balance\\n    /// @return balance The balance amount (in settlement token's decimals)\\n    function getBalance(address trader) external view returns (int256 balance);\\n\\n    /// @notice Get the balance of Vault of the specified collateral token and trader\\n    /// @param trader The address of the trader\\n    /// @param token The address of the collateral token\\n    /// @return balance The balance amount (in its native decimals)\\n    function getBalanceByToken(address trader, address token) external view returns (int256 balance);\\n\\n    /// @notice Get they array of collateral token addresses that a trader has\\n    /// @return collateralTokens array of collateral token addresses\\n    function getCollateralTokens(address trader) external view returns (address[] memory collateralTokens);\\n\\n    /// @notice Get account value of the specified trader\\n    /// @param trader The address of the trader\\n    /// @return accountValueX10_S account value (in settlement token's decimals)\\n    function getAccountValue(address trader) external view returns (int256 accountValueX10_S);\\n\\n    /// @notice Get the free collateral value denominated in the settlement token of the specified trader\\n    /// @param trader The address of the trader\\n    /// @return freeCollateral the value (in settlement token's decimals) of free collateral available\\n    ///         for withdraw or opening new positions or orders)\\n    function getFreeCollateral(address trader) external view returns (uint256 freeCollateral);\\n\\n    /// @notice Get the free collateral amount of the specified trader and collateral ratio\\n    /// @dev There are three configurations for different insolvency risk tolerances:\\n    ///      **conservative, moderate &aggressive**. We will start with the **conservative** one\\n    ///      and gradually move to **aggressive** to increase capital efficiency\\n    /// @param trader The address of the trader\\n    /// @param ratio The margin requirement ratio, imRatio or mmRatio\\n    /// @return freeCollateralByRatio freeCollateral (in settlement token's decimals), by using the\\n    ///         input margin requirement ratio; can be negative\\n    function getFreeCollateralByRatio(address trader, uint24 ratio)\\n        external\\n        view\\n        returns (int256 freeCollateralByRatio);\\n\\n    /// @notice Get the free collateral amount of the specified collateral token of specified trader\\n    /// @param trader The address of the trader\\n    /// @param token The address of the collateral token\\n    /// @return freeCollateral amount of that token (in the token's native decimals)\\n    function getFreeCollateralByToken(address trader, address token) external view returns (uint256 freeCollateral);\\n\\n    /// @notice Get the specified trader's settlement value, including pending fee, funding payment,\\n    ///         owed realized PnL and unrealized PnL\\n    /// @dev Note the difference between `settlementTokenBalanceX10_S`, `getSettlementTokenValue()` and `getBalance()`:\\n    ///      They are all settlement token balances but with or without\\n    ///      pending fee, funding payment, owed realized PnL, unrealized PnL, respectively\\n    ///      In practical applications, we use `getSettlementTokenValue()` to get the trader's debt (if < 0)\\n    /// @param trader The address of the trader\\n    /// @return balance The balance amount (in settlement token's decimals)\\n    function getSettlementTokenValue(address trader) external view returns (int256 balance);\\n\\n    /// @notice Get the settlement token address\\n    /// @dev We assume the settlement token should match the denominator of the price oracle.\\n    ///      i.e. if the settlement token is USDC, then the oracle should be priced in USD\\n    /// @return settlementToken The address of the settlement token\\n    function getSettlementToken() external view returns (address settlementToken);\\n\\n    /// @notice Check if a given trader's collateral token can be liquidated; liquidation criteria:\\n    ///         1. margin ratio falls below maintenance threshold + 20bps (mmRatioBuffer)\\n    ///         2. USDC debt > nonSettlementTokenValue * debtNonSettlementTokenValueRatio (ex: 75%)\\n    ///         3. USDC debt > debtThreshold (ex: $10000)\\n    //          USDC debt = USDC balance + Total Unrealized PnL\\n    /// @param trader The address of the trader\\n    /// @return isLiquidatable If the trader can be liquidated\\n    function isLiquidatable(address trader) external view returns (bool isLiquidatable);\\n\\n    /// @notice get the margin requirement for collateral liquidation of a trader\\n    /// @dev this value is compared with `ClearingHouse.getAccountValue()` (int)\\n    /// @param trader The address of the trader\\n    /// @return marginRequirement margin requirement (in 18 decimals)\\n    function getMarginRequirementForCollateralLiquidation(address trader)\\n        external\\n        view\\n        returns (int256 marginRequirement);\\n\\n    /// @notice Get the maintenance margin ratio for collateral liquidation\\n    /// @return collateralMmRatio The maintenance margin ratio for collateral liquidation\\n    function getCollateralMmRatio() external view returns (uint24 collateralMmRatio);\\n\\n    /// @notice Get a trader's liquidatable collateral amount by a given settlement amount\\n    /// @param token The address of the token of the trader's collateral\\n    /// @param settlementX10_S The amount of settlement token the liquidator wants to pay\\n    /// @return collateral The collateral amount(in its native decimals) the liquidator can get\\n    function getLiquidatableCollateralBySettlement(address token, uint256 settlementX10_S)\\n        external\\n        view\\n        returns (uint256 collateral);\\n\\n    /// @notice Get a trader's repaid settlement amount by a given collateral amount\\n    /// @param token The address of the token of the trader's collateral\\n    /// @param collateral The amount of collateral token the liquidator wants to get\\n    /// @return settlementX10_S The settlement amount(in settlement token's decimals) the liquidator needs to pay\\n    function getRepaidSettlementByCollateral(address token, uint256 collateral)\\n        external\\n        view\\n        returns (uint256 settlementX10_S);\\n\\n    /// @notice Get a trader's max repaid settlement & max liquidatable collateral by a given collateral token\\n    /// @param trader The address of the trader\\n    /// @param token The address of the token of the trader's collateral\\n    /// @return maxRepaidSettlementX10_S The maximum settlement amount(in settlement token's decimals)\\n    ///         the liquidator needs to pay to liquidate a trader's collateral token\\n    /// @return maxLiquidatableCollateral The maximum liquidatable collateral amount\\n    ///         (in the collateral token's native decimals) of a trader\\n    function getMaxRepaidSettlementAndLiquidatableCollateral(address trader, address token)\\n        external\\n        view\\n        returns (uint256 maxRepaidSettlementX10_S, uint256 maxLiquidatableCollateral);\\n\\n    /// @notice Get settlement token decimals\\n    /// @dev cached the settlement token's decimal for gas optimization\\n    /// @return decimals The decimals of settlement token\\n    function decimals() external view returns (uint8 decimals);\\n\\n    /// @notice Get the borrowed settlement token amount from insurance fund\\n    /// @return debtAmount The debt amount (in settlement token's decimals)\\n    function getTotalDebt() external view returns (uint256 debtAmount);\\n\\n    /// @notice Get `ClearingHouseConfig` contract address\\n    /// @return clearingHouseConfig The address of `ClearingHouseConfig` contract\\n    function getClearingHouseConfig() external view returns (address clearingHouseConfig);\\n\\n    /// @notice Get `AccountBalance` contract address\\n    /// @return accountBalance The address of `AccountBalance` contract\\n    function getAccountBalance() external view returns (address accountBalance);\\n\\n    /// @notice Get `InsuranceFund` contract address\\n    /// @return insuranceFund The address of `InsuranceFund` contract\\n    function getInsuranceFund() external view returns (address insuranceFund);\\n\\n    /// @notice Get `Exchange` contract address\\n    /// @return exchange The address of `Exchange` contract\\n    function getExchange() external view returns (address exchange);\\n\\n    /// @notice Get `ClearingHouse` contract address\\n    /// @return clearingHouse The address of `ClearingHouse` contract\\n    function getClearingHouse() external view returns (address clearingHouse);\\n\\n    /// @notice Get `CollateralManager` contract address\\n    /// @return clearingHouse The address of `CollateralManager` contract\\n    function getCollateralManager() external view returns (address clearingHouse);\\n\\n    /// @notice Get `WETH9` contract address\\n    /// @return clearingHouse The address of `WETH9` contract\\n    function getWETH9() external view returns (address clearingHouse);\\n}\\n\",\"keccak256\":\"0x223e1ceca03e137b559acf66682444e238c2a6330779823bc1f59ee55248d21e\",\"license\":\"GPL-3.0-or-later\"},\"contracts/lib/Collateral.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity 0.7.6;\\n\\nlibrary Collateral {\\n    struct Config {\\n        address priceFeed;\\n        uint24 collateralRatio;\\n        uint24 discountRatio;\\n        uint256 depositCap;\\n    }\\n}\\n\",\"keccak256\":\"0x0dac603aa6c71d9ea3d63655fd7f1b981c49bf25aa9f2610c67321db2b0471ee\",\"license\":\"GPL-2.0-or-later\"},\"contracts/storage/CollateralManagerStorage.sol\":{\"content\":\"// SPDX-License-Identifier: GPL-2.0-or-later\\npragma solidity 0.7.6;\\n\\nimport { Collateral } from \\\"../lib/Collateral.sol\\\";\\n\\nabstract contract CollateralManagerStorageV1 {\\n    // key: token address, value: collateral config\\n    mapping(address => Collateral.Config) internal _collateralConfigMap;\\n\\n    address internal _clearingHouseConfig;\\n\\n    address internal _vault;\\n\\n    uint8 internal _maxCollateralTokensPerAccount;\\n\\n    uint24 internal _mmRatioBuffer;\\n\\n    uint24 internal _debtNonSettlementTokenValueRatio;\\n\\n    uint24 internal _liquidationRatio;\\n\\n    uint24 internal _clInsuranceFundFeeRatio;\\n\\n    uint256 internal _debtThreshold;\\n\\n    uint256 internal _collateralValueDust;\\n}\\n\",\"keccak256\":\"0x245f8275928915a98cff5505419f8802340bb3c0091839e17cf14f32f456c6f4\",\"license\":\"GPL-2.0-or-later\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506125c8806100206000396000f3fe608060405234801561001057600080fd5b50600436106101d15760003560e01c806376e1128611610105578063bc5920ba1161009d578063bc5920ba14610376578063ce6d7f261461037e578063d765f6e414610391578063dccbe8fe146103a4578063dcf49212146103b7578063ddb13813146103ca578063de8b54e6146103d2578063f6a44b38146103e5578063f878369e14610405576101d1565b806376e112861461030d5780638456cb59146103205780638c8557d9146103285780638d928af81461033b5780638da5cb5b146103435780638facb54e1461034b578063aa2a82941461035e578063b2eae83814610366578063b6113be61461036e576101d1565b80633f4ba83a116101785780633f4ba83a1461027f57806341898b8814610287578063449e815d1461029a57806348896fcd146102ba5780635c975abb146102c25780636237314e146102ca578063648cff3a146102dd5780636c8381f8146102f0578063715018a614610305576101d1565b806301b6a802146101d65780630262771f146101f45780630ee21e54146102095780630f969b871461022957806313af40351461023e57806324966a581461025157806334917794146102645780633bc1d7ab14610277575b600080fd5b6101de610418565b6040516101eb91906124e8565b60405180910390f35b6101fc61042a565b6040516101eb9190612501565b61021c61021736600461206a565b61043a565b6040516101eb9190612356565b61023c6102373660046122ae565b61045a565b005b61023c61024c36600461206a565b61051d565b61023c61025f366004612276565b610678565b61023c6102723660046122ae565b610756565b6101de6107e8565b61023c6107fa565b61023c61029536600461221e565b610861565b6102ad6102a836600461224b565b61095f565b6040516101eb91906124f8565b6102ad610a00565b61021c610a06565b61023c6102d8366004612276565b610a0f565b6101de6102eb366004612276565b610ac2565b6102f8610b7d565b6040516101eb9190612316565b61023c610b8c565b61023c61031b3660046120a2565b610c2d565b61023c610d2d565b6101fc61033636600461206a565b610d92565b6102f8610e26565b6102f8610e35565b61023c61035936600461221e565b610e44565b6102f8610f35565b6102ad610f44565b6101de610f4a565b61023c610f5c565b61023c61038c3660046120da565b611048565b61023c61039f3660046122de565b6114b0565b61023c6103b2366004612276565b611555565b61023c6103c5366004612276565b611627565b6101de6116f0565b61023c6103e0366004612183565b6116fb565b6103f86103f336600461206a565b61199a565b6040516101eb91906124a7565b61023c61041336600461224b565b611a01565b60cd54600160d81b900462ffffff1690565b60cd54600160a01b900460ff1690565b6001600160a01b03908116600090815260cb602052604090205416151590565b610462611ab5565b6001600160a01b0316610473610e35565b6001600160a01b0316146104b7576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b806104dd5760405162461bcd60e51b81526004016104d4906123c4565b60405180910390fd5b60cf8190556040517f6c5ec56528cb0cd679a4675fe0e05d839c9f0eaabcf07edae0156097860327d3906105129083906124f8565b60405180910390a150565b610525611ab5565b6001600160a01b0316610536610e35565b6001600160a01b03161461057a576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b6001600160a01b0381166105be576040805162461bcd60e51b81526020600482015260066024820152650534f5f4e57360d41b604482015290519081900360640190fd5b6033546001600160a01b038281169116141561060a576040805162461bcd60e51b8152602060048201526006602482015265534f5f53414f60d01b604482015290519081900360640190fd5b6034546001600160a01b0382811691161415610656576040805162461bcd60e51b8152602060048201526006602482015265534f5f53414360d01b604482015290519081900360640190fd5b603480546001600160a01b0319166001600160a01b0392909216919091179055565b80620f424062ffffff821611156106a15760405162461bcd60e51b81526004016104d490612405565b6106a9611ab5565b6001600160a01b03166106ba610e35565b6001600160a01b0316146106fe576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60cd805462ffffff60c01b1916600160c01b62ffffff8516021790556040517fa237b04e26233c5e5686a0757f3f5c54763d249df2415b1cd23ee3febfe486e39061074a9084906124e8565b60405180910390a15050565b61075e611ab5565b6001600160a01b031661076f610e35565b6001600160a01b0316146107b3576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60d08190556040517f70c607d975120eebbca7ab6dcce0ead0b62780965d3dbb9d07626fbaacfeb09e906105129083906124f8565b60cd54600160a81b900462ffffff1690565b610802611ab5565b6001600160a01b0316610813610e35565b6001600160a01b031614610857576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b61085f611ac4565b565b80620f424062ffffff8216111561088a5760405162461bcd60e51b81526004016104d490612405565b610892611ab5565b6001600160a01b03166108a3610e35565b6001600160a01b0316146108e7576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b6108f083611b64565b6001600160a01b038316600081815260cb602052604090819020805462ffffff60a01b1916600160a01b62ffffff871602179055517ff5835a89fb1ddbf664427bb605f15cdab5c8138d96bf5548af663d80c586f86e906109529085906124e8565b60405180910390a2505050565b600061096a83611b64565b6001600160a01b03808416600090815260cb602052604090819020549051630e75722360e41b815291169063e7572230906109a99085906004016124f8565b60206040518083038186803b1580156109c157600080fd5b505afa1580156109d5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109f991906122c6565b9392505050565b60d05490565b60675460ff1690565b610a17611ab5565b6001600160a01b0316610a28610e35565b6001600160a01b031614610a6c576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b610a7581610ac2565b5060cd805462ffffff60a81b1916600160a81b62ffffff8416021790556040517f0c7e7d8787a51e904310208ff0d53d59e72cf969cfe4b649c15921f5799416dc906105129083906124e8565b6000808260cc60009054906101000a90046001600160a01b03166001600160a01b031663a85494026040518163ffffffff1660e01b815260040160206040518083038186803b158015610b1457600080fd5b505afa158015610b28573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b4c9190612292565b019050620f424062ffffff82161115610b775760405162461bcd60e51b81526004016104d4906123a3565b92915050565b6034546001600160a01b031690565b610b94611ab5565b6001600160a01b0316610ba5610e35565b6001600160a01b031614610be9576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b6033546040516000916001600160a01b031690600080516020612573833981519152908390a3603380546001600160a01b0319908116909155603480549091169055565b610c35611ab5565b6001600160a01b0316610c46610e35565b6001600160a01b031614610c8a576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b610c9382611b64565b610ca5816001600160a01b0316611b8c565b610cc15760405162461bcd60e51b81526004016104d4906123e4565b6001600160a01b03828116600081815260cb60205260409081902080546001600160a01b0319169385169390931790925590517ff41a3b1d02012f65ae0013b820b751937676e06fe15550a1841ad88825d0b0dd90610d21908490612316565b60405180910390a25050565b610d35611ab5565b6001600160a01b0316610d46610e35565b6001600160a01b031614610d8a576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b61085f611b92565b6000610d9d82611b64565b6001600160a01b03808316600090815260cb602090815260409182902054825163313ce56760e01b8152925193169263313ce567926004808201939291829003018186803b158015610dee57600080fd5b505afa158015610e02573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b7791906122fa565b60cd546001600160a01b031690565b6033546001600160a01b031690565b80620f424062ffffff82161115610e6d5760405162461bcd60e51b81526004016104d490612405565b610e75611ab5565b6001600160a01b0316610e86610e35565b6001600160a01b031614610eca576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b610ed383611b64565b6001600160a01b038316600081815260cb602052604090819020805462ffffff60b81b1916600160b81b62ffffff871602179055517f9076416b8e788b309c7463933dc842ba2699b241c3219ce8e072988529ff31a3906109529085906124e8565b60cc546001600160a01b031690565b60cf5490565b60cd54600160c01b900462ffffff1690565b6034546001600160a01b0316610fa1576040805162461bcd60e51b81526020600482015260056024820152640534f5f43360dc1b604482015290519081900360640190fd5b610fa9611ab5565b6034546001600160a01b03908116911614610ff4576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4360d01b604482015290519081900360640190fd5b6034546033546040516001600160a01b03928316929091169060008051602061257383398151915290600090a360348054603380546001600160a01b03199081166001600160a01b03841617909155169055565b600054610100900460ff16806110615750611061611c15565b8061106f575060005460ff16155b6110aa5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff161580156110d5576000805460ff1961ff0019909116610100171660011790555b86620f424062ffffff821611156110fe5760405162461bcd60e51b81526004016104d490612405565b86620f424062ffffff821611156111275760405162461bcd60e51b81526004016104d490612405565b85620f424062ffffff821611156111505760405162461bcd60e51b81526004016104d490612405565b6111628d6001600160a01b0316611b8c565b61117e5760405162461bcd60e51b81526004016104d490612361565b6111908c6001600160a01b0316611b8c565b6111ac5760405162461bcd60e51b81526004016104d490612446565b6111b4611c26565b8c60cc60006101000a8154816001600160a01b0302191690836001600160a01b031602179055508b60cd60006101000a8154816001600160a01b0302191690836001600160a01b031602179055508a60cd60146101000a81548160ff021916908360ff1602179055508960cd60186101000a81548162ffffff021916908362ffffff1602179055508860cd601b6101000a81548162ffffff021916908362ffffff16021790555061126488610ac2565b5060cd805462ffffff60a81b1916600160a81b62ffffff8b8116919091029190911790915560ce805462ffffff191691891691909117905560cf86905560d08590556040516001600160a01b038e16907f5a7bac4c08e1022faaa1b1a89ae303af586a2f96a465f8b356666294886a891090600090a26040516001600160a01b038d16907fa49691f0dd6477ccef49962612a236d252e3a31c3be8b61fa6abeff3e74a757290600090a27ff784e61fb9b384cd875177b67fe0592f178875d26c6192b102750fedf87535798b60405161133d9190612501565b60405180910390a17f0c7e7d8787a51e904310208ff0d53d59e72cf969cfe4b649c15921f5799416dc8860405161137491906124e8565b60405180910390a17fa237b04e26233c5e5686a0757f3f5c54763d249df2415b1cd23ee3febfe486e38a6040516113ab91906124e8565b60405180910390a17fb876b9c251594d2497d6eee4d31f68c52ad0a4ee33de83fa4ae75a8517289964896040516113e291906124e8565b60405180910390a17f202cd03b2f9dc14bd41e38a741fa7f1fad98599419089f660e6b0692dd99b6458760405161141991906124e8565b60405180910390a17f6c5ec56528cb0cd679a4675fe0e05d839c9f0eaabcf07edae0156097860327d38660405161145091906124f8565b60405180910390a17f70c607d975120eebbca7ab6dcce0ead0b62780965d3dbb9d07626fbaacfeb09e8560405161148791906124f8565b60405180910390a150505080156114a4576000805461ff00191690555b50505050505050505050565b6114b8611ab5565b6001600160a01b03166114c9610e35565b6001600160a01b03161461150d576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60cd805460ff60a01b1916600160a01b60ff8416021790556040517ff784e61fb9b384cd875177b67fe0592f178875d26c6192b102750fedf875357990610512908390612501565b80620f424062ffffff8216111561157e5760405162461bcd60e51b81526004016104d490612405565b611586611ab5565b6001600160a01b0316611597610e35565b6001600160a01b0316146115db576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60cd805462ffffff60d81b1916600160d81b62ffffff8516021790556040517fb876b9c251594d2497d6eee4d31f68c52ad0a4ee33de83fa4ae75a85172899649061074a9084906124e8565b80620f424062ffffff821611156116505760405162461bcd60e51b81526004016104d490612405565b611658611ab5565b6001600160a01b0316611669610e35565b6001600160a01b0316146116ad576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60ce805462ffffff191662ffffff84161790556040517f202cd03b2f9dc14bd41e38a741fa7f1fad98599419089f660e6b0692dd99b6459061074a9084906124e8565b60ce5462ffffff1690565b6020810151620f424062ffffff821611156117285760405162461bcd60e51b81526004016104d490612405565b6040820151620f424062ffffff821611156117555760405162461bcd60e51b81526004016104d490612405565b61175d611ab5565b6001600160a01b031661176e610e35565b6001600160a01b0316146117b2576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b6117bb8461043a565b156117d85760405162461bcd60e51b81526004016104d490612383565b6117ea846001600160a01b0316611b8c565b6118065760405162461bcd60e51b81526004016104d490612486565b825161181a906001600160a01b0316611b8c565b6118365760405162461bcd60e51b81526004016104d4906123e4565b60cd54604080516312803c7d60e01b815290516001600160a01b038088169316916312803c7d916004808301926020929190829003018186803b15801561187c57600080fd5b505afa158015611890573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906118b49190612086565b6001600160a01b031614156118db5760405162461bcd60e51b81526004016104d490612466565b6001600160a01b03848116600081815260cb60209081526040918290208751815492890151898501516001600160a01b03199094169682169690961762ffffff60a01b1916600160a01b62ffffff808916919091029190911762ffffff60b81b1916600160b81b9185169190910217825560608901516001909201829055925193947fd0389550217821f9cc5a0083667927af8975045b224a4d9b6e463fbb5d76c8439461198c949391929061232a565b60405180910390a250505050565b6119a2612043565b506001600160a01b03908116600090815260cb602090815260409182902082516080810184528154948516815262ffffff600160a01b8604811693820193909352600160b81b9094049091169183019190915260010154606082015290565b611a09611ab5565b6001600160a01b0316611a1a610e35565b6001600160a01b031614611a5e576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b611a6782611b64565b6001600160a01b038216600081815260cb602052604090819020600101839055517f22e062f893f21dc613f55d25ae4b077dfa32d888235a2fca0dfe7fb3ad60aa5e90610d219084906124f8565b6000611abf611cd7565b905090565b611acc610a06565b611b14576040805162461bcd60e51b815260206004820152601460248201527314185d5cd8589b194e881b9bdd081c185d5cd95960621b604482015290519081900360640190fd5b6067805460ff191690557f5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa611b47611ab5565b604080516001600160a01b039092168252519081900360200190a1565b611b6d8161043a565b611b895760405162461bcd60e51b81526004016104d490612424565b50565b3b151590565b611b9a610a06565b15611bdf576040805162461bcd60e51b815260206004820152601060248201526f14185d5cd8589b194e881c185d5cd95960821b604482015290519081900360640190fd5b6067805460ff191660011790557f62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258611b47611ab5565b6000611c2030611b8c565b15905090565b600054610100900460ff1680611c3f5750611c3f611c15565b80611c4d575060005460ff16155b611c885760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611cb3576000805460ff1961ff0019909116610100171660011790555b611cbb611cdb565b611cc3611dca565b8015611b89576000805461ff001916905550565b3390565b600054610100900460ff1680611cf45750611cf4611c15565b80611d02575060005460ff16155b611d3d5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611d68576000805460ff1961ff0019909116610100171660011790555b611d70611e67565b6000611d7a611ab5565b603380546001600160a01b0319166001600160a01b03831690811790915560405191925090600090600080516020612573833981519152908290a3508015611b89576000805461ff001916905550565b600054610100900460ff1680611de35750611de3611c15565b80611df1575060005460ff16155b611e2c5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611e57576000805460ff1961ff0019909116610100171660011790555b611e5f611ef8565b611cc3611f98565b600054610100900460ff1680611e805750611e80611c15565b80611e8e575060005460ff16155b611ec95760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611ef4576000805460ff1961ff0019909116610100171660011790555b611cc35b600054610100900460ff1680611f115750611f11611c15565b80611f1f575060005460ff16155b611f5a5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611cc3576000805460ff1961ff0019909116610100171660011790558015611b89576000805461ff001916905550565b600054610100900460ff1680611fb15750611fb1611c15565b80611fbf575060005460ff16155b611ffa5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015612025576000805460ff1961ff0019909116610100171660011790555b6067805460ff191690558015611b89576000805461ff001916905550565b60408051608081018252600080825260208201819052918101829052606081019190915290565b60006020828403121561207b578081fd5b81356109f98161250f565b600060208284031215612097578081fd5b81516109f98161250f565b600080604083850312156120b4578081fd5b82356120bf8161250f565b915060208301356120cf8161250f565b809150509250929050565b60008060008060008060008060006101208a8c0312156120f8578485fd5b89356121038161250f565b985060208a01356121138161250f565b975060408a013561212381612535565b965060608a013561213381612524565b955060808a013561214381612524565b945060a08a013561215381612524565b935060c08a013561216381612524565b8093505060e08a013591506101008a013590509295985092959850929598565b60008082840360a0811215612196578283fd5b83356121a18161250f565b92506080601f19820112156121b4578182fd5b506040516080810181811067ffffffffffffffff821117156121d257fe5b60405260208401356121e38161250f565b815260408401356121f381612524565b6020820152606084013561220681612524565b60408201526080939093013560608401525092909150565b60008060408385031215612230578182fd5b823561223b8161250f565b915060208301356120cf81612524565b6000806040838503121561225d578182fd5b82356122688161250f565b946020939093013593505050565b600060208284031215612287578081fd5b81356109f981612524565b6000602082840312156122a3578081fd5b81516109f981612524565b6000602082840312156122bf578081fd5b5035919050565b6000602082840312156122d7578081fd5b5051919050565b6000602082840312156122ef578081fd5b81356109f981612535565b60006020828403121561230b578081fd5b81516109f981612535565b6001600160a01b0391909116815260200190565b6001600160a01b0394909416845262ffffff928316602085015291166040830152606082015260800190565b901515815260200190565b602080825260089082015267434d5f4348434e4360c01b604082015260600190565b602080825260069082015265434d5f43544560d01b604082015260600190565b60208082526007908201526621a6afa4a1a6a960c91b604082015260600190565b60208082526006908201526510d357d6911560d21b604082015260600190565b602080825260079082015266434d5f50464e4360c81b604082015260600190565b60208082526005908201526421a6afa4a960d91b604082015260600190565b602080825260089082015267434d5f54494e414360c01b604082015260600190565b602080825260069082015265434d5f564e4360d01b604082015260600190565b602080825260069082015265434d5f43495360d01b604082015260600190565b602080825260079082015266434d5f43544e4360c81b604082015260600190565b81516001600160a01b0316815260208083015162ffffff90811691830191909152604080840151909116908201526060918201519181019190915260800190565b62ffffff91909116815260200190565b90815260200190565b60ff91909116815260200190565b6001600160a01b0381168114611b8957600080fd5b62ffffff81168114611b8957600080fd5b60ff81168114611b8957600080fdfe496e697469616c697a61626c653a20636f6e747261637420697320616c726561647920696e697469616c697a65648be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0a2646970667358221220e74786d75e0149c53bccd9c24965e8c1c43f65a5d1d7903b3c5315b8d7818d8b64736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106101d15760003560e01c806376e1128611610105578063bc5920ba1161009d578063bc5920ba14610376578063ce6d7f261461037e578063d765f6e414610391578063dccbe8fe146103a4578063dcf49212146103b7578063ddb13813146103ca578063de8b54e6146103d2578063f6a44b38146103e5578063f878369e14610405576101d1565b806376e112861461030d5780638456cb59146103205780638c8557d9146103285780638d928af81461033b5780638da5cb5b146103435780638facb54e1461034b578063aa2a82941461035e578063b2eae83814610366578063b6113be61461036e576101d1565b80633f4ba83a116101785780633f4ba83a1461027f57806341898b8814610287578063449e815d1461029a57806348896fcd146102ba5780635c975abb146102c25780636237314e146102ca578063648cff3a146102dd5780636c8381f8146102f0578063715018a614610305576101d1565b806301b6a802146101d65780630262771f146101f45780630ee21e54146102095780630f969b871461022957806313af40351461023e57806324966a581461025157806334917794146102645780633bc1d7ab14610277575b600080fd5b6101de610418565b6040516101eb91906124e8565b60405180910390f35b6101fc61042a565b6040516101eb9190612501565b61021c61021736600461206a565b61043a565b6040516101eb9190612356565b61023c6102373660046122ae565b61045a565b005b61023c61024c36600461206a565b61051d565b61023c61025f366004612276565b610678565b61023c6102723660046122ae565b610756565b6101de6107e8565b61023c6107fa565b61023c61029536600461221e565b610861565b6102ad6102a836600461224b565b61095f565b6040516101eb91906124f8565b6102ad610a00565b61021c610a06565b61023c6102d8366004612276565b610a0f565b6101de6102eb366004612276565b610ac2565b6102f8610b7d565b6040516101eb9190612316565b61023c610b8c565b61023c61031b3660046120a2565b610c2d565b61023c610d2d565b6101fc61033636600461206a565b610d92565b6102f8610e26565b6102f8610e35565b61023c61035936600461221e565b610e44565b6102f8610f35565b6102ad610f44565b6101de610f4a565b61023c610f5c565b61023c61038c3660046120da565b611048565b61023c61039f3660046122de565b6114b0565b61023c6103b2366004612276565b611555565b61023c6103c5366004612276565b611627565b6101de6116f0565b61023c6103e0366004612183565b6116fb565b6103f86103f336600461206a565b61199a565b6040516101eb91906124a7565b61023c61041336600461224b565b611a01565b60cd54600160d81b900462ffffff1690565b60cd54600160a01b900460ff1690565b6001600160a01b03908116600090815260cb602052604090205416151590565b610462611ab5565b6001600160a01b0316610473610e35565b6001600160a01b0316146104b7576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b806104dd5760405162461bcd60e51b81526004016104d4906123c4565b60405180910390fd5b60cf8190556040517f6c5ec56528cb0cd679a4675fe0e05d839c9f0eaabcf07edae0156097860327d3906105129083906124f8565b60405180910390a150565b610525611ab5565b6001600160a01b0316610536610e35565b6001600160a01b03161461057a576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b6001600160a01b0381166105be576040805162461bcd60e51b81526020600482015260066024820152650534f5f4e57360d41b604482015290519081900360640190fd5b6033546001600160a01b038281169116141561060a576040805162461bcd60e51b8152602060048201526006602482015265534f5f53414f60d01b604482015290519081900360640190fd5b6034546001600160a01b0382811691161415610656576040805162461bcd60e51b8152602060048201526006602482015265534f5f53414360d01b604482015290519081900360640190fd5b603480546001600160a01b0319166001600160a01b0392909216919091179055565b80620f424062ffffff821611156106a15760405162461bcd60e51b81526004016104d490612405565b6106a9611ab5565b6001600160a01b03166106ba610e35565b6001600160a01b0316146106fe576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60cd805462ffffff60c01b1916600160c01b62ffffff8516021790556040517fa237b04e26233c5e5686a0757f3f5c54763d249df2415b1cd23ee3febfe486e39061074a9084906124e8565b60405180910390a15050565b61075e611ab5565b6001600160a01b031661076f610e35565b6001600160a01b0316146107b3576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60d08190556040517f70c607d975120eebbca7ab6dcce0ead0b62780965d3dbb9d07626fbaacfeb09e906105129083906124f8565b60cd54600160a81b900462ffffff1690565b610802611ab5565b6001600160a01b0316610813610e35565b6001600160a01b031614610857576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b61085f611ac4565b565b80620f424062ffffff8216111561088a5760405162461bcd60e51b81526004016104d490612405565b610892611ab5565b6001600160a01b03166108a3610e35565b6001600160a01b0316146108e7576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b6108f083611b64565b6001600160a01b038316600081815260cb602052604090819020805462ffffff60a01b1916600160a01b62ffffff871602179055517ff5835a89fb1ddbf664427bb605f15cdab5c8138d96bf5548af663d80c586f86e906109529085906124e8565b60405180910390a2505050565b600061096a83611b64565b6001600160a01b03808416600090815260cb602052604090819020549051630e75722360e41b815291169063e7572230906109a99085906004016124f8565b60206040518083038186803b1580156109c157600080fd5b505afa1580156109d5573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109f991906122c6565b9392505050565b60d05490565b60675460ff1690565b610a17611ab5565b6001600160a01b0316610a28610e35565b6001600160a01b031614610a6c576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b610a7581610ac2565b5060cd805462ffffff60a81b1916600160a81b62ffffff8416021790556040517f0c7e7d8787a51e904310208ff0d53d59e72cf969cfe4b649c15921f5799416dc906105129083906124e8565b6000808260cc60009054906101000a90046001600160a01b03166001600160a01b031663a85494026040518163ffffffff1660e01b815260040160206040518083038186803b158015610b1457600080fd5b505afa158015610b28573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b4c9190612292565b019050620f424062ffffff82161115610b775760405162461bcd60e51b81526004016104d4906123a3565b92915050565b6034546001600160a01b031690565b610b94611ab5565b6001600160a01b0316610ba5610e35565b6001600160a01b031614610be9576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b6033546040516000916001600160a01b031690600080516020612573833981519152908390a3603380546001600160a01b0319908116909155603480549091169055565b610c35611ab5565b6001600160a01b0316610c46610e35565b6001600160a01b031614610c8a576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b610c9382611b64565b610ca5816001600160a01b0316611b8c565b610cc15760405162461bcd60e51b81526004016104d4906123e4565b6001600160a01b03828116600081815260cb60205260409081902080546001600160a01b0319169385169390931790925590517ff41a3b1d02012f65ae0013b820b751937676e06fe15550a1841ad88825d0b0dd90610d21908490612316565b60405180910390a25050565b610d35611ab5565b6001600160a01b0316610d46610e35565b6001600160a01b031614610d8a576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b61085f611b92565b6000610d9d82611b64565b6001600160a01b03808316600090815260cb602090815260409182902054825163313ce56760e01b8152925193169263313ce567926004808201939291829003018186803b158015610dee57600080fd5b505afa158015610e02573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610b7791906122fa565b60cd546001600160a01b031690565b6033546001600160a01b031690565b80620f424062ffffff82161115610e6d5760405162461bcd60e51b81526004016104d490612405565b610e75611ab5565b6001600160a01b0316610e86610e35565b6001600160a01b031614610eca576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b610ed383611b64565b6001600160a01b038316600081815260cb602052604090819020805462ffffff60b81b1916600160b81b62ffffff871602179055517f9076416b8e788b309c7463933dc842ba2699b241c3219ce8e072988529ff31a3906109529085906124e8565b60cc546001600160a01b031690565b60cf5490565b60cd54600160c01b900462ffffff1690565b6034546001600160a01b0316610fa1576040805162461bcd60e51b81526020600482015260056024820152640534f5f43360dc1b604482015290519081900360640190fd5b610fa9611ab5565b6034546001600160a01b03908116911614610ff4576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4360d01b604482015290519081900360640190fd5b6034546033546040516001600160a01b03928316929091169060008051602061257383398151915290600090a360348054603380546001600160a01b03199081166001600160a01b03841617909155169055565b600054610100900460ff16806110615750611061611c15565b8061106f575060005460ff16155b6110aa5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff161580156110d5576000805460ff1961ff0019909116610100171660011790555b86620f424062ffffff821611156110fe5760405162461bcd60e51b81526004016104d490612405565b86620f424062ffffff821611156111275760405162461bcd60e51b81526004016104d490612405565b85620f424062ffffff821611156111505760405162461bcd60e51b81526004016104d490612405565b6111628d6001600160a01b0316611b8c565b61117e5760405162461bcd60e51b81526004016104d490612361565b6111908c6001600160a01b0316611b8c565b6111ac5760405162461bcd60e51b81526004016104d490612446565b6111b4611c26565b8c60cc60006101000a8154816001600160a01b0302191690836001600160a01b031602179055508b60cd60006101000a8154816001600160a01b0302191690836001600160a01b031602179055508a60cd60146101000a81548160ff021916908360ff1602179055508960cd60186101000a81548162ffffff021916908362ffffff1602179055508860cd601b6101000a81548162ffffff021916908362ffffff16021790555061126488610ac2565b5060cd805462ffffff60a81b1916600160a81b62ffffff8b8116919091029190911790915560ce805462ffffff191691891691909117905560cf86905560d08590556040516001600160a01b038e16907f5a7bac4c08e1022faaa1b1a89ae303af586a2f96a465f8b356666294886a891090600090a26040516001600160a01b038d16907fa49691f0dd6477ccef49962612a236d252e3a31c3be8b61fa6abeff3e74a757290600090a27ff784e61fb9b384cd875177b67fe0592f178875d26c6192b102750fedf87535798b60405161133d9190612501565b60405180910390a17f0c7e7d8787a51e904310208ff0d53d59e72cf969cfe4b649c15921f5799416dc8860405161137491906124e8565b60405180910390a17fa237b04e26233c5e5686a0757f3f5c54763d249df2415b1cd23ee3febfe486e38a6040516113ab91906124e8565b60405180910390a17fb876b9c251594d2497d6eee4d31f68c52ad0a4ee33de83fa4ae75a8517289964896040516113e291906124e8565b60405180910390a17f202cd03b2f9dc14bd41e38a741fa7f1fad98599419089f660e6b0692dd99b6458760405161141991906124e8565b60405180910390a17f6c5ec56528cb0cd679a4675fe0e05d839c9f0eaabcf07edae0156097860327d38660405161145091906124f8565b60405180910390a17f70c607d975120eebbca7ab6dcce0ead0b62780965d3dbb9d07626fbaacfeb09e8560405161148791906124f8565b60405180910390a150505080156114a4576000805461ff00191690555b50505050505050505050565b6114b8611ab5565b6001600160a01b03166114c9610e35565b6001600160a01b03161461150d576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60cd805460ff60a01b1916600160a01b60ff8416021790556040517ff784e61fb9b384cd875177b67fe0592f178875d26c6192b102750fedf875357990610512908390612501565b80620f424062ffffff8216111561157e5760405162461bcd60e51b81526004016104d490612405565b611586611ab5565b6001600160a01b0316611597610e35565b6001600160a01b0316146115db576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60cd805462ffffff60d81b1916600160d81b62ffffff8516021790556040517fb876b9c251594d2497d6eee4d31f68c52ad0a4ee33de83fa4ae75a85172899649061074a9084906124e8565b80620f424062ffffff821611156116505760405162461bcd60e51b81526004016104d490612405565b611658611ab5565b6001600160a01b0316611669610e35565b6001600160a01b0316146116ad576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b60ce805462ffffff191662ffffff84161790556040517f202cd03b2f9dc14bd41e38a741fa7f1fad98599419089f660e6b0692dd99b6459061074a9084906124e8565b60ce5462ffffff1690565b6020810151620f424062ffffff821611156117285760405162461bcd60e51b81526004016104d490612405565b6040820151620f424062ffffff821611156117555760405162461bcd60e51b81526004016104d490612405565b61175d611ab5565b6001600160a01b031661176e610e35565b6001600160a01b0316146117b2576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b6117bb8461043a565b156117d85760405162461bcd60e51b81526004016104d490612383565b6117ea846001600160a01b0316611b8c565b6118065760405162461bcd60e51b81526004016104d490612486565b825161181a906001600160a01b0316611b8c565b6118365760405162461bcd60e51b81526004016104d4906123e4565b60cd54604080516312803c7d60e01b815290516001600160a01b038088169316916312803c7d916004808301926020929190829003018186803b15801561187c57600080fd5b505afa158015611890573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906118b49190612086565b6001600160a01b031614156118db5760405162461bcd60e51b81526004016104d490612466565b6001600160a01b03848116600081815260cb60209081526040918290208751815492890151898501516001600160a01b03199094169682169690961762ffffff60a01b1916600160a01b62ffffff808916919091029190911762ffffff60b81b1916600160b81b9185169190910217825560608901516001909201829055925193947fd0389550217821f9cc5a0083667927af8975045b224a4d9b6e463fbb5d76c8439461198c949391929061232a565b60405180910390a250505050565b6119a2612043565b506001600160a01b03908116600090815260cb602090815260409182902082516080810184528154948516815262ffffff600160a01b8604811693820193909352600160b81b9094049091169183019190915260010154606082015290565b611a09611ab5565b6001600160a01b0316611a1a610e35565b6001600160a01b031614611a5e576040805162461bcd60e51b8152602060048201526006602482015265534f5f434e4f60d01b604482015290519081900360640190fd5b611a6782611b64565b6001600160a01b038216600081815260cb602052604090819020600101839055517f22e062f893f21dc613f55d25ae4b077dfa32d888235a2fca0dfe7fb3ad60aa5e90610d219084906124f8565b6000611abf611cd7565b905090565b611acc610a06565b611b14576040805162461bcd60e51b815260206004820152601460248201527314185d5cd8589b194e881b9bdd081c185d5cd95960621b604482015290519081900360640190fd5b6067805460ff191690557f5db9ee0a495bf2e6ff9c91a7834c1ba4fdd244a5e8aa4e537bd38aeae4b073aa611b47611ab5565b604080516001600160a01b039092168252519081900360200190a1565b611b6d8161043a565b611b895760405162461bcd60e51b81526004016104d490612424565b50565b3b151590565b611b9a610a06565b15611bdf576040805162461bcd60e51b815260206004820152601060248201526f14185d5cd8589b194e881c185d5cd95960821b604482015290519081900360640190fd5b6067805460ff191660011790557f62e78cea01bee320cd4e420270b5ea74000d11b0c9f74754ebdbfc544b05a258611b47611ab5565b6000611c2030611b8c565b15905090565b600054610100900460ff1680611c3f5750611c3f611c15565b80611c4d575060005460ff16155b611c885760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611cb3576000805460ff1961ff0019909116610100171660011790555b611cbb611cdb565b611cc3611dca565b8015611b89576000805461ff001916905550565b3390565b600054610100900460ff1680611cf45750611cf4611c15565b80611d02575060005460ff16155b611d3d5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611d68576000805460ff1961ff0019909116610100171660011790555b611d70611e67565b6000611d7a611ab5565b603380546001600160a01b0319166001600160a01b03831690811790915560405191925090600090600080516020612573833981519152908290a3508015611b89576000805461ff001916905550565b600054610100900460ff1680611de35750611de3611c15565b80611df1575060005460ff16155b611e2c5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611e57576000805460ff1961ff0019909116610100171660011790555b611e5f611ef8565b611cc3611f98565b600054610100900460ff1680611e805750611e80611c15565b80611e8e575060005460ff16155b611ec95760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611ef4576000805460ff1961ff0019909116610100171660011790555b611cc35b600054610100900460ff1680611f115750611f11611c15565b80611f1f575060005460ff16155b611f5a5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015611cc3576000805460ff1961ff0019909116610100171660011790558015611b89576000805461ff001916905550565b600054610100900460ff1680611fb15750611fb1611c15565b80611fbf575060005460ff16155b611ffa5760405162461bcd60e51b815260040180806020018281038252602e815260200180612545602e913960400191505060405180910390fd5b600054610100900460ff16158015612025576000805460ff1961ff0019909116610100171660011790555b6067805460ff191690558015611b89576000805461ff001916905550565b60408051608081018252600080825260208201819052918101829052606081019190915290565b60006020828403121561207b578081fd5b81356109f98161250f565b600060208284031215612097578081fd5b81516109f98161250f565b600080604083850312156120b4578081fd5b82356120bf8161250f565b915060208301356120cf8161250f565b809150509250929050565b60008060008060008060008060006101208a8c0312156120f8578485fd5b89356121038161250f565b985060208a01356121138161250f565b975060408a013561212381612535565b965060608a013561213381612524565b955060808a013561214381612524565b945060a08a013561215381612524565b935060c08a013561216381612524565b8093505060e08a013591506101008a013590509295985092959850929598565b60008082840360a0811215612196578283fd5b83356121a18161250f565b92506080601f19820112156121b4578182fd5b506040516080810181811067ffffffffffffffff821117156121d257fe5b60405260208401356121e38161250f565b815260408401356121f381612524565b6020820152606084013561220681612524565b60408201526080939093013560608401525092909150565b60008060408385031215612230578182fd5b823561223b8161250f565b915060208301356120cf81612524565b6000806040838503121561225d578182fd5b82356122688161250f565b946020939093013593505050565b600060208284031215612287578081fd5b81356109f981612524565b6000602082840312156122a3578081fd5b81516109f981612524565b6000602082840312156122bf578081fd5b5035919050565b6000602082840312156122d7578081fd5b5051919050565b6000602082840312156122ef578081fd5b81356109f981612535565b60006020828403121561230b578081fd5b81516109f981612535565b6001600160a01b0391909116815260200190565b6001600160a01b0394909416845262ffffff928316602085015291166040830152606082015260800190565b901515815260200190565b602080825260089082015267434d5f4348434e4360c01b604082015260600190565b602080825260069082015265434d5f43544560d01b604082015260600190565b60208082526007908201526621a6afa4a1a6a960c91b604082015260600190565b60208082526006908201526510d357d6911560d21b604082015260600190565b602080825260079082015266434d5f50464e4360c81b604082015260600190565b60208082526005908201526421a6afa4a960d91b604082015260600190565b602080825260089082015267434d5f54494e414360c01b604082015260600190565b602080825260069082015265434d5f564e4360d01b604082015260600190565b602080825260069082015265434d5f43495360d01b604082015260600190565b602080825260079082015266434d5f43544e4360c81b604082015260600190565b81516001600160a01b0316815260208083015162ffffff90811691830191909152604080840151909116908201526060918201519181019190915260800190565b62ffffff91909116815260200190565b90815260200190565b60ff91909116815260200190565b6001600160a01b0381168114611b8957600080fd5b62ffffff81168114611b8957600080fd5b60ff81168114611b8957600080fdfe496e697469616c697a61626c653a20636f6e747261637420697320616c726561647920696e697469616c697a65648be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0a2646970667358221220e74786d75e0149c53bccd9c24965e8c1c43f65a5d1d7903b3c5315b8d7818d8b64736f6c63430007060033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "candidate()": {
+        "details": "Returns the candidate that can become the owner."
+      },
+      "getCLInsuranceFundFeeRatio()": {
+        "details": "6 decimals. For example, `clInsuranceFundFeeRatio` = 5% means      the liquidator will pay 5% of transferred settlement token to insurance fund",
+        "returns": {
+          "_0": "insurance fund fee ratio"
+        }
+      },
+      "getClearingHouseConfig()": {
+        "returns": {
+          "_0": "clearingHouseConfig address of clearing house config"
+        }
+      },
+      "getCollateralConfig(address)": {
+        "params": {
+          "token": "address of token"
+        },
+        "returns": {
+          "_0": "collateral config"
+        }
+      },
+      "getCollateralValueDust()": {
+        "details": "6 decimals",
+        "returns": {
+          "_0": "Dust collateral value"
+        }
+      },
+      "getDebtNonSettlementTokenValueRatio()": {
+        "details": "6 decimals",
+        "returns": {
+          "_0": "ratio"
+        }
+      },
+      "getDebtThreshold()": {
+        "details": "6 decimals",
+        "returns": {
+          "_0": "Debt threshold"
+        }
+      },
+      "getLiquidationRatio()": {
+        "details": "6 decimals. For example, `liquidationRatio` = 50% means      the liquidator can repay as much as half of the trader’s debt in one liquidation",
+        "returns": {
+          "_0": "liquidation ratio"
+        }
+      },
+      "getMaxCollateralTokensPerAccount()": {
+        "returns": {
+          "_0": "max number of collateral tokens per account"
+        }
+      },
+      "getMmRatioBuffer()": {
+        "details": "6 decimals, same decimals as _mmRatio",
+        "returns": {
+          "_0": "ratio"
+        }
+      },
+      "getPrice(address,uint256)": {
+        "params": {
+          "token": "address of token"
+        },
+        "returns": {
+          "_0": "price of the certain period"
+        }
+      },
+      "getPriceFeedDecimals(address)": {
+        "params": {
+          "token": "address of token"
+        },
+        "returns": {
+          "_0": "decimals of the price feed"
+        }
+      },
+      "getVault()": {
+        "returns": {
+          "_0": "vault address of vault"
+        }
+      },
+      "isCollateral(address)": {
+        "params": {
+          "token": "address of token"
+        },
+        "returns": {
+          "_0": "true if the token is one of collateral tokens"
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "paused()": {
+        "details": "Returns true if the contract is paused, and false otherwise."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "requireValidCollateralMmRatio(uint24)": {
+        "params": {
+          "mmRatioBuffer": "safe margin ratio buffer; 6 decimals, same decimals as _mmRatio"
+        },
+        "returns": {
+          "_0": "collateralMmRatio the collateral maintenance margin ratio"
+        }
+      },
+      "setCollateralValueDust(uint256)": {
+        "details": "Same decimals as the settlement token"
+      },
+      "setOwner(address)": {
+        "details": "Set ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      },
+      "updateOwner()": {
+        "details": "Transfers ownership of the contract to a new account (`_candidate`). Can only be called by the new owner."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "CLInsuranceFundFeeRatioChanged(uint24)": {
+        "notice": "Emitted when owner init or update the clearing house insurance fund fee ratio,         charge fee for clearing house insurance fund."
+      },
+      "ClearingHouseConfigChanged(address)": {
+        "notice": "Emitted when owner update the address of clearing house config"
+      },
+      "CollateralAdded(address,address,uint24,uint24,uint256)": {
+        "notice": "Emitted when owner add collateral"
+      },
+      "CollateralRatioChanged(address,uint24)": {
+        "notice": "Emitted when owner update the collateral ratio of a collateral token"
+      },
+      "CollateralValueDustChanged(uint256)": {
+        "notice": "Emitted when owner init or update the collateral value dust,\t\t\tif a trader’s debt value falls below this dust threshold, \t\tthe liquidator will ignore the liquidationRatio."
+      },
+      "DebtNonSettlementTokenValueRatioChanged(uint24)": {
+        "notice": "Emitted when owner init or update the debt non-settlement token value ratio,         maximum `debt / nonSettlementTokenValue` before the account's is liquidatable"
+      },
+      "DebtThresholdChanged(uint256)": {
+        "notice": "Emitted when owner init or update the debt threshold,\t\t \tmaximum debt allowed before an account’s collateral is liquidatable."
+      },
+      "DepositCapChanged(address,uint256)": {
+        "notice": "Emitted when owner update the deposit cap of a collateral token"
+      },
+      "DiscountRatioChanged(address,uint24)": {
+        "notice": "Emitted when owner change the discount ratio"
+      },
+      "LiquidationRatioChanged(uint24)": {
+        "notice": "Emitted when owner init or update the liquidation ratio,         the value presents the max repaid ratio of the collateral liquidation."
+      },
+      "MaxCollateralTokensPerAccountChanged(uint8)": {
+        "notice": "Emitted when owner init or update the max collateral tokens that per account can have, \t\tthis is can prevent high gas cost."
+      },
+      "MmRatioBufferChanged(uint24)": {
+        "notice": "Emitted when owner init or update the maintenance margin ratio buffer,         the value provides a safe range between the mmRatio & the collateralMMRatio."
+      },
+      "PriceFeedChanged(address,address)": {
+        "notice": "Emitted when owner update the price feed address of a collateral token"
+      },
+      "VaultChanged(address)": {
+        "notice": "Emitted when owner update the address of vault"
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "getCLInsuranceFundFeeRatio()": {
+        "notice": "Get the insurance fund fee ratio when liquidating a trader's collateral"
+      },
+      "getClearingHouseConfig()": {
+        "notice": "Get the address of clearing house config"
+      },
+      "getCollateralConfig(address)": {
+        "notice": "Get collateral config by token address"
+      },
+      "getCollateralValueDust()": {
+        "notice": "Get the threshold of the minium repaid.  \t\tIf a trader’s collateral value (denominated in settlement token) falls below the threshold,         the liquidator can convert it with 100% `liquidationRatio` so there is no dust left"
+      },
+      "getDebtNonSettlementTokenValueRatio()": {
+        "notice": "Get the maximum `debt / nonSettlementTokenValue` before the account's collaterals are liquidated"
+      },
+      "getDebtThreshold()": {
+        "notice": "Get the maximum debt (denominated in settlement token) allowed\t\t\tbefore an account’s collateral is liquidatable."
+      },
+      "getLiquidationRatio()": {
+        "notice": "Get the maximum ratio of debt can be repaid in one transaction"
+      },
+      "getMaxCollateralTokensPerAccount()": {
+        "notice": "Get the max number of collateral tokens per account"
+      },
+      "getMmRatioBuffer()": {
+        "notice": "Get the minimum `margin ratio - mmRatio` before the account's collateral is liquidatable"
+      },
+      "getPrice(address,uint256)": {
+        "notice": "Get the price of the collateral token"
+      },
+      "getPriceFeedDecimals(address)": {
+        "notice": "Get price feed decimals of the collateral token"
+      },
+      "getVault()": {
+        "notice": "Get the address of vault"
+      },
+      "isCollateral(address)": {
+        "notice": "Check if the given token is one of collateral tokens"
+      },
+      "requireValidCollateralMmRatio(uint24)": {
+        "notice": "Require and get the the valid collateral maintenance margin ratio by mmRatioBuffer"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 1158,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_initialized",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 1161,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_initializing",
+        "offset": 1,
+        "slot": "0",
+        "type": "t_bool"
+      },
+      {
+        "astId": 2475,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_uint256)50_storage"
+      },
+      {
+        "astId": 27037,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "51",
+        "type": "t_address"
+      },
+      {
+        "astId": 27039,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_candidate",
+        "offset": 0,
+        "slot": "52",
+        "type": "t_address"
+      },
+      {
+        "astId": 27043,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "53",
+        "type": "t_array(t_uint256)50_storage"
+      },
+      {
+        "astId": 2989,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_paused",
+        "offset": 0,
+        "slot": "103",
+        "type": "t_bool"
+      },
+      {
+        "astId": 3080,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "104",
+        "type": "t_array(t_uint256)49_storage"
+      },
+      {
+        "astId": 26976,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "__gap",
+        "offset": 0,
+        "slot": "153",
+        "type": "t_array(t_uint256)50_storage"
+      },
+      {
+        "astId": 32324,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_collateralConfigMap",
+        "offset": 0,
+        "slot": "203",
+        "type": "t_mapping(t_address,t_struct(Config)29479_storage)"
+      },
+      {
+        "astId": 32326,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_clearingHouseConfig",
+        "offset": 0,
+        "slot": "204",
+        "type": "t_address"
+      },
+      {
+        "astId": 32328,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_vault",
+        "offset": 0,
+        "slot": "205",
+        "type": "t_address"
+      },
+      {
+        "astId": 32330,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_maxCollateralTokensPerAccount",
+        "offset": 20,
+        "slot": "205",
+        "type": "t_uint8"
+      },
+      {
+        "astId": 32332,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_mmRatioBuffer",
+        "offset": 21,
+        "slot": "205",
+        "type": "t_uint24"
+      },
+      {
+        "astId": 32334,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_debtNonSettlementTokenValueRatio",
+        "offset": 24,
+        "slot": "205",
+        "type": "t_uint24"
+      },
+      {
+        "astId": 32336,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_liquidationRatio",
+        "offset": 27,
+        "slot": "205",
+        "type": "t_uint24"
+      },
+      {
+        "astId": 32338,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_clInsuranceFundFeeRatio",
+        "offset": 0,
+        "slot": "206",
+        "type": "t_uint24"
+      },
+      {
+        "astId": 32340,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_debtThreshold",
+        "offset": 0,
+        "slot": "207",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 32342,
+        "contract": "contracts/CollateralManager.sol:CollateralManager",
+        "label": "_collateralValueDust",
+        "offset": 0,
+        "slot": "208",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_uint256)49_storage": {
+        "base": "t_uint256",
+        "encoding": "inplace",
+        "label": "uint256[49]",
+        "numberOfBytes": "1568"
+      },
+      "t_array(t_uint256)50_storage": {
+        "base": "t_uint256",
+        "encoding": "inplace",
+        "label": "uint256[50]",
+        "numberOfBytes": "1600"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_struct(Config)29479_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct Collateral.Config)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Config)29479_storage"
+      },
+      "t_struct(Config)29479_storage": {
+        "encoding": "inplace",
+        "label": "struct Collateral.Config",
+        "members": [
+          {
+            "astId": 29472,
+            "contract": "contracts/CollateralManager.sol:CollateralManager",
+            "label": "priceFeed",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 29474,
+            "contract": "contracts/CollateralManager.sol:CollateralManager",
+            "label": "collateralRatio",
+            "offset": 20,
+            "slot": "0",
+            "type": "t_uint24"
+          },
+          {
+            "astId": 29476,
+            "contract": "contracts/CollateralManager.sol:CollateralManager",
+            "label": "discountRatio",
+            "offset": 23,
+            "slot": "0",
+            "type": "t_uint24"
+          },
+          {
+            "astId": 29478,
+            "contract": "contracts/CollateralManager.sol:CollateralManager",
+            "label": "depositCap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint24": {
+        "encoding": "inplace",
+        "label": "uint24",
+        "numberOfBytes": "3"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint8": {
+        "encoding": "inplace",
+        "label": "uint8",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}
